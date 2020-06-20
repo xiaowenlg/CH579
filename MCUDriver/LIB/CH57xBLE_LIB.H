@@ -618,7 +618,7 @@ extern const u8 VER_LIB[];    // LIB version
 #define GATT_MAX_NUM_CONN                (GATT_CONNECT_NUM+1)
 
 // GATT Client Characteristic Configuration Bit Fields
-#define GATT_CLIENT_CFG_NOTIFY           0x0001 //!< The Characteristic Value shall be notified            应用通知特征
+#define GATT_CLIENT_CFG_NOTIFY           0x0001 //!< The Characteristic Value shall be notified
 #define GATT_CLIENT_CFG_INDICATE         0x0002 //!< The Characteristic Value shall be indicated
 
 #define GATT_CFG_NO_OPERATION            0x0000 // No operation
