@@ -2,20 +2,20 @@
     "configurations": [{
         "name": "keil",
         "includePath": [
-            "d:\\Git\\CH579\\APP\\include",
-            "d:\\Git\\CH579\\Profile\\include",
-            "d:\\Git\\CH579\\MCUDriver\\HAL\\include",
-            "d:\\Git\\CH579\\MCUDriver\\LIB",
-            "d:\\Git\\CH579\\MCUDriver\\SRC\\CMSIS\\Include",
-            "d:\\Git\\CH579\\MCUDriver\\SRC\\StdPeriphDriver\\inc",
-            "d:\\Git\\CH579\\MCUDriver",
+            "..\\APP\\include",
+            "..\\Profile\\include",
+            "..\\MCUDriver\\HAL\\include",
+            "..\\MCUDriver\\LIB",
+            "..\\MCUDriver\\SRC\\CMSIS\\Include",
+            "..\\MCUDriver\\SRC\\StdPeriphDriver\\inc",
+            "..\\MCUDriver",
             "F:\\Keil_v5\\ARM\\ARMCC\\include",
             "F:\\Keil_v5\\ARM\\ARMCC\\include\\rw",
-            "d:\\Git\\CH579\\APP",
-            "d:\\Git\\CH579\\Profile",
-            "d:\\Git\\CH579\\MCUDriver\\SRC\\Startup",
-            "d:\\Git\\CH579\\MCUDriver\\SRC\\StdPeriphDriver",
-            "d:\\Git\\CH579\\MCUDriver\\HAL"
+            "..\\APP",
+            "..\\Profile",
+            "..\\MCUDriver\\SRC\\Startup",
+            "..\\MCUDriver\\SRC\\StdPeriphDriver",
+            "..\\MCUDriver\\HAL"
         ],
         "defines": [
             "__CC_ARM",
