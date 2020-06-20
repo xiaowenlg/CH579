@@ -1,9 +1,19 @@
+/*
+ * @Author: your name
+ * @Date: 2020-06-19 17:52:23
+ * @LastEditTime: 2020-06-20 09:30:53
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \CH579\APP\peripheral_main.c
+ */
 /********************************** (C) COPYRIGHT *******************************
 * File Name          : main.c
-* Author             : WCH
+* Author             : xiaowenlg
 * Version            : V1.1
 * Date               : 2019/11/05
-* Description        : 外设从机应用主函数及任务系统初始化
+* GitHubSSH          ：git@github.com:xiaowenlg/CH579.git
+* Description        : CH579通过外设中断记录活动次数，时间并计算卡路里，然后通过BLE发送到手机
+
 *******************************************************************************/
 
 /******************************************************************************/

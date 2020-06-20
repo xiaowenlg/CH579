@@ -31,8 +31,8 @@ I (..\MCUDriver\HAL\include\HAL.h)(0x5EEC8AD7)
 I (..\MCUDriver\HAL\include\RTC.h)(0x5EEC8AD7)
 I (..\MCUDriver\HAL\include\SLEEP.h)(0x5EEC8AD7)
 I (..\MCUDriver\HAL\include\LED.h)(0x5EEC8AD7)
-I (..\MCUDriver\HAL\include\KEY.h)(0x5EEC8AD7)
-F (..\APP\peripheral_main.c)(0x5EEC8AD7)(-c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork -I ..\APP\include -I ..\Profile\include -I ..\MCUDriver\HAL\include -I ..\MCUDriver\LIB -I ..\MCUDriver\SRC\CMSIS\Include -I ..\MCUDriver\SRC\StdPeriphDriver\inc -I ..\MCUDriver-I.\RTE\_BLE-If:\Keil_v5\ARM\PACK\ARM\CMSIS\5.7.0\CMSIS\Core\Include-If:\Keil_v5\ARM\PACK\Keil\WCH57x_DFP\1.2.0\Drivers\CMSIS\Device\WCH\CH57x\Include-D__UVISION_VERSION="530" -D_RTE_ -D_RTE_ -DDEBUG-o .\obj\peripheral_main.o --omf_browse .\obj\peripheral_main.crf --depend .\obj\peripheral_main.d)
+I (..\MCUDriver\HAL\include\KEY.h)(0x5EED658E)
+F (..\APP\peripheral_main.c)(0x5EED66CD)(-c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork -I ..\APP\include -I ..\Profile\include -I ..\MCUDriver\HAL\include -I ..\MCUDriver\LIB -I ..\MCUDriver\SRC\CMSIS\Include -I ..\MCUDriver\SRC\StdPeriphDriver\inc -I ..\MCUDriver-I.\RTE\_BLE-If:\Keil_v5\ARM\PACK\ARM\CMSIS\5.7.0\CMSIS\Core\Include-If:\Keil_v5\ARM\PACK\Keil\WCH57x_DFP\1.2.0\Drivers\CMSIS\Device\WCH\CH57x\Include-D__UVISION_VERSION="530" -D_RTE_ -D_RTE_ -DDEBUG-o .\obj\peripheral_main.o --omf_browse .\obj\peripheral_main.crf --depend .\obj\peripheral_main.d)
 I (..\MCUDriver\HAL\include\CONFIG.h)(0x5EEC8AD7)
 I (..\MCUDriver\LIB\CH57xBLE_LIB.H)(0x5ED5A796)
 I (..\MCUDriver\SRC\StdPeriphDriver\inc\CH57x_common.h)(0x5EEC8AD7)
@@ -60,7 +60,7 @@ I (..\MCUDriver\HAL\include\HAL.h)(0x5EEC8AD7)
 I (..\MCUDriver\HAL\include\RTC.h)(0x5EEC8AD7)
 I (..\MCUDriver\HAL\include\SLEEP.h)(0x5EEC8AD7)
 I (..\MCUDriver\HAL\include\LED.h)(0x5EEC8AD7)
-I (..\MCUDriver\HAL\include\KEY.h)(0x5EEC8AD7)
+I (..\MCUDriver\HAL\include\KEY.h)(0x5EED658E)
 I (..\Profile\include\gattprofile.h)(0x5EEC8AD7)
 I (..\APP\include\peripheral.h)(0x5EEC8AD7)
 F (..\Profile\devinfoservice.c)(0x5EEC8AD7)(-c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork -I ..\APP\include -I ..\Profile\include -I ..\MCUDriver\HAL\include -I ..\MCUDriver\LIB -I ..\MCUDriver\SRC\CMSIS\Include -I ..\MCUDriver\SRC\StdPeriphDriver\inc -I ..\MCUDriver-I.\RTE\_BLE-If:\Keil_v5\ARM\PACK\ARM\CMSIS\5.7.0\CMSIS\Core\Include-If:\Keil_v5\ARM\PACK\Keil\WCH57x_DFP\1.2.0\Drivers\CMSIS\Device\WCH\CH57x\Include-D__UVISION_VERSION="530" -D_RTE_ -D_RTE_ -DDEBUG-o .\obj\devinfoservice.o --omf_browse .\obj\devinfoservice.crf --depend .\obj\devinfoservice.d)
@@ -275,7 +275,7 @@ I (..\MCUDriver\HAL\include\config.h)(0x5EEC8AD7)
 I (..\MCUDriver\LIB\CH57xBLE_LIB.H)(0x5ED5A796)
 I (..\MCUDriver\HAL\include\SLEEP.h)(0x5EEC8AD7)
 I (..\MCUDriver\HAL\include\LED.h)(0x5EEC8AD7)
-I (..\MCUDriver\HAL\include\KEY.h)(0x5EEC8AD7)
+I (..\MCUDriver\HAL\include\KEY.h)(0x5EED658E)
 F (..\MCUDriver\HAL\RTC.c)(0x5EEC8AD7)(-c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork -I ..\APP\include -I ..\Profile\include -I ..\MCUDriver\HAL\include -I ..\MCUDriver\LIB -I ..\MCUDriver\SRC\CMSIS\Include -I ..\MCUDriver\SRC\StdPeriphDriver\inc -I ..\MCUDriver-I.\RTE\_BLE-If:\Keil_v5\ARM\PACK\ARM\CMSIS\5.7.0\CMSIS\Core\Include-If:\Keil_v5\ARM\PACK\Keil\WCH57x_DFP\1.2.0\Drivers\CMSIS\Device\WCH\CH57x\Include-D__UVISION_VERSION="530" -D_RTE_ -D_RTE_ -DDEBUG-o .\obj\rtc.o --omf_browse .\obj\rtc.crf --depend .\obj\rtc.d)
 I (..\MCUDriver\SRC\StdPeriphDriver\inc\CH57x_common.h)(0x5EEC8AD7)
 I (F:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E53505C)
@@ -304,7 +304,7 @@ I (..\MCUDriver\HAL\include\config.h)(0x5EEC8AD7)
 I (..\MCUDriver\LIB\CH57xBLE_LIB.H)(0x5ED5A796)
 I (..\MCUDriver\HAL\include\SLEEP.h)(0x5EEC8AD7)
 I (..\MCUDriver\HAL\include\LED.h)(0x5EEC8AD7)
-I (..\MCUDriver\HAL\include\KEY.h)(0x5EEC8AD7)
+I (..\MCUDriver\HAL\include\KEY.h)(0x5EED658E)
 F (..\MCUDriver\HAL\SLEEP.c)(0x5EEC8AD7)(-c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork -I ..\APP\include -I ..\Profile\include -I ..\MCUDriver\HAL\include -I ..\MCUDriver\LIB -I ..\MCUDriver\SRC\CMSIS\Include -I ..\MCUDriver\SRC\StdPeriphDriver\inc -I ..\MCUDriver-I.\RTE\_BLE-If:\Keil_v5\ARM\PACK\ARM\CMSIS\5.7.0\CMSIS\Core\Include-If:\Keil_v5\ARM\PACK\Keil\WCH57x_DFP\1.2.0\Drivers\CMSIS\Device\WCH\CH57x\Include-D__UVISION_VERSION="530" -D_RTE_ -D_RTE_ -DDEBUG-o .\obj\sleep.o --omf_browse .\obj\sleep.crf --depend .\obj\sleep.d)
 I (..\MCUDriver\SRC\StdPeriphDriver\inc\CH57x_common.h)(0x5EEC8AD7)
 I (F:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E53505C)
@@ -333,6 +333,6 @@ I (..\MCUDriver\HAL\include\config.h)(0x5EEC8AD7)
 I (..\MCUDriver\LIB\CH57xBLE_LIB.H)(0x5ED5A796)
 I (..\MCUDriver\HAL\include\SLEEP.h)(0x5EEC8AD7)
 I (..\MCUDriver\HAL\include\LED.h)(0x5EEC8AD7)
-I (..\MCUDriver\HAL\include\KEY.h)(0x5EEC8AD7)
+I (..\MCUDriver\HAL\include\KEY.h)(0x5EED658E)
 F (..\MCUDriver\LIB\CH57xBLE.lib)(0x5E9823F6)()
 F (..\MCUDriver\HAL\include\config.h)(0x5EEC8AD7)()
