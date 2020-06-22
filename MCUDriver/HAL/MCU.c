@@ -18,7 +18,7 @@ uint8 flag = 0, Led_Num = 0;
 extern int8 rssi_t;
 uint16 Number_Records = 0;
 uint16 Count_now = 0;
-SportData_t *sd_t = NULL;
+SportData_t sd_t = {0};
 uint16_t SportTim = 0;
 uint8 Freq = 0;
 /*******************************************************************************
@@ -189,10 +189,10 @@ tmosEvents HAL_ProcessEvent(tmosTaskID task_id, tmosEvents events)
       SportTim++;
     }
 
-    sd_t->count = Number_Records; //次数
-    sd_t->freq = Freq;            //速度
-    sd_t->tim = SportTim;         //时间
-    sd_t->cal = ConsumeHeat(WEIGHT, SportTim, Freq);
+    sd_t.count = Number_Records; //次数
+    sd_t.freq = Freq;            //速度
+    sd_t.tim = SportTim;         //时间
+    sd_t.cal = ConsumeHeat(WEIGHT, SportTim / 60.00, (float)Freq);
 
     tmos_start_task(halTaskID, HAL_TEST_EVENT, MS1_TO_SYSTEM_TIME(1000));
     return events ^ HAL_TEST_EVENT;
@@ -230,7 +230,7 @@ void HAL_Init() //应用层初始化
 #endif
   __enable_irq();
   tmos_start_task(halTaskID, HAL_TEST_EVENT, 1000); // 添加一个测试任务
-  sd_t->productID = PRODUCTID;                      //设置设备ID
+  sd_t.productID = PRODUCTID;                       //设置设备ID
 }
 
 /*******************************************************************************

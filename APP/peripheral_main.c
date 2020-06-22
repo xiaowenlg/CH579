@@ -49,7 +49,7 @@ int main(void)
   GPIOB_ModeCfg(PB15_LED, GPIO_ModeOut_PP_20mA);
   UART1_DefInit();
   Weak_Source_Init();          //唤醒源配置
-  sd_t->productID = PRODUCTID; //设置设备id
+  sd_t.productID = PRODUCTID; //设置设备id
 #if (PRINT_VER_LIB)
   PRINT("%s\n", VER_LIB);
 #endif

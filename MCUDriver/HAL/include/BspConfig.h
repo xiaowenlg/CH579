@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-06-20 09:31:45
- * @LastEditTime: 2020-06-22 17:48:29
+ * @LastEditTime: 2020-06-22 20:42:12
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \CH579\MCUDriver\HAL\include\BspConfig.h
@@ -14,7 +14,7 @@
 #define SENSOR GPIO_Pin_12               //干簧管引脚 PA12
 #define PRODUCTID "00010000400023000002" //产品ID
 #define COEFFICIENG                      //卡路里系数
-#define WEIGHT 60                        //体重
+#define WEIGHT 60.00                     //体重
 #define PB15_LED GPIO_Pin_15             //led
 
 //debug switch
@@ -22,6 +22,7 @@
 #define EVENT_RUNNING 1     // use this macro to open or close event is running
 #define PRINT_VER_LIB 1     //print ver_lib
 #define PRINT_BLE_RECEIVE 1 //print ble received message
+#define PRINT_BLE_UPDATE 0  //连接更新
 //定义数据结构体
 typedef struct SportData
 {

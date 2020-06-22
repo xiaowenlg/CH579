@@ -66,7 +66,7 @@ extern "C"
   /*********************************************************************
 *********************************************************************/
   //extern uint16 Number_Records; //¼ÇÂ¼´ÎÊý
-  extern SportData_t *sd_t;
+  extern SportData_t sd_t;
 #ifdef __cplusplus
 }
 #endif

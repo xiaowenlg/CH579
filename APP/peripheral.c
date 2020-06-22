@@ -497,8 +497,9 @@ static void peripheralParamUpdateCB(uint16 connHandle, uint16 connInterval,
     peripheralConnList.connInterval = connInterval;
     peripheralConnList.connSlaveLatency = connSlaveLatency;
     peripheralConnList.connTimeout = connTimeout;
-
+#if PRINT_BLE_UPDATE
     PRINT("Update %x - Int %x \n", connHandle, connInterval);
+#endif
   }
   else
   {
@@ -606,7 +607,7 @@ static void performPeriodicTask(void)
   notiData[2] = 1;
   for (i = 3; i < 13; i++)
   {
-    notiData[i] = sd_t->productID[i - 3];
+    notiData[i] = sd_t.productID[i - 3];
   }
   notiData[19] = 0xf6;
   peripheralChar4Notify(notiData, SIMPLEPROFILE_CHAR4_LEN);
@@ -615,7 +616,7 @@ static void performPeriodicTask(void)
   notiData[2] = 2;
   for (i = 3; i < 13; i++)
   {
-    notiData[i] = sd_t->productID[i + 7];
+    notiData[i] = sd_t.productID[i + 7];
   }
   notiData[19] = 0xf6;
   peripheralChar4Notify(notiData, SIMPLEPROFILE_CHAR4_LEN);
@@ -626,12 +627,12 @@ static void performPeriodicTask(void)
   {
     notiData[i] = 0;
   }
-  notiData[3] = sd_t->tim >> 8;
-  notiData[4] = sd_t->tim & 0x00ff;
-  notiData[5] = sd_t->count >> 8;
-  notiData[6] = sd_t->count & 0x00ff;
-  notiData[7] = sd_t->cal >> 8;
-  notiData[8] = sd_t->cal & 0x00ff;
+  notiData[3] = sd_t.tim >> 8;
+  notiData[4] = sd_t.tim & 0x00ff;
+  notiData[5] = sd_t.count >> 8;
+  notiData[6] = sd_t.count & 0x00ff;
+  notiData[7] = sd_t.cal >> 8;
+  notiData[8] = sd_t.cal & 0x00ff;
   peripheralChar4Notify(notiData, SIMPLEPROFILE_CHAR4_LEN);
   //4
   notiData[2] = 4;
@@ -639,8 +640,8 @@ static void performPeriodicTask(void)
   {
     notiData[i] = 0;
   }
-  notiData[7] = sd_t->count >> 8;
-  notiData[8] = sd_t->count & 0x00ff;
+  notiData[7] = sd_t.count >> 8;
+  notiData[8] = sd_t.count & 0x00ff;
   peripheralChar4Notify(notiData, SIMPLEPROFILE_CHAR4_LEN);
   //5
   notiData[2] = 5;
@@ -696,7 +697,9 @@ static void simpleProfileChangeCB(uint8 paramID, uint8 len)
   {
     uint8 newValue[SIMPLEPROFILE_CHAR1_LEN];
     SimpleProfile_GetParameter(SIMPLEPROFILE_CHAR1, newValue);
+#if PRINT_BLE_RECEIVE
     PRINT("profile ChangeCB CHAR1.. \n");
+#endif
     break;
   }
 
@@ -705,7 +708,8 @@ static void simpleProfileChangeCB(uint8 paramID, uint8 len)
     uint8 i;
     uint8 newValue[SIMPLEPROFILE_CHAR3_LEN];
     SimpleProfile_GetParameter(SIMPLEPROFILE_CHAR3, newValue);
-    //PRINT("profile ChangeCB CHAR3..==%s\n",newValue);
+//PRINT("profile ChangeCB CHAR3..==%s\n",newValue);
+#if PRINT_BLE_RECEIVE
     PRINT("Receive DataLen%d:\n", len);
     PRINT("Receive Data:");
     for (i = 0; i < len; i++)
@@ -713,6 +717,7 @@ static void simpleProfileChangeCB(uint8 paramID, uint8 len)
       PRINT("%d", newValue[i]);
     }
     PRINT("\n");
+#endif
     break;
   }
 
