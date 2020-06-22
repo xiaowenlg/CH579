@@ -230,6 +230,7 @@ void HAL_Init() //应用层初始化
 #endif
   __enable_irq();
   tmos_start_task(halTaskID, HAL_TEST_EVENT, 1000); // 添加一个测试任务
+  sd_t->productID = PRODUCTID;                      //设置设备ID
 }
 
 /*******************************************************************************
@@ -290,16 +291,16 @@ uint16 HAL_GetInterTempValue(void)
 //外部中断
 void GPIO_IRQHandler(void)
 {
-  if (GPIOA_ReadITFlagBit(GPIO_Pin_5))
+  if (GPIOA_ReadITFlagBit(SENSOR))
   {
     DelayMs(10);
-    if (GPIOA_ReadPortPin(GPIO_Pin_5) == 0)
+    if (GPIOA_ReadPortPin(SENSOR) == 0)
       Number_Records++; //次数累加
     Count_now++;
     PRINT("Number=%d\n", Number_Records);
   }
 
-  GPIOA_ClearITFlagBit(GPIO_Pin_6 | GPIO_Pin_5);
+  GPIOA_ClearITFlagBit(SENSOR);
 }
 //get the sport data
 

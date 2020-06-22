@@ -46,7 +46,7 @@ int main(void)
   Sleep_Init(); //ÀØ√ﬂ≈‰÷√
   GPIOA_SetBits(bTXD1);
   GPIOA_ModeCfg(bTXD1, GPIO_ModeOut_PP_5mA);
-  GPIOA_ModeCfg(GPIO_Pin_15, GPIO_ModeOut_PP_20mA);
+  GPIOB_ModeCfg(PB15_LED, GPIO_ModeOut_PP_20mA);
   UART1_DefInit();
   Weak_Source_Init();          //ªΩ–—‘¥≈‰÷√
   sd_t->productID = PRODUCTID; //…Ë÷√…Ë±∏id

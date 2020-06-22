@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\obj\BLE.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\obj\BLE.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Mon Jun 22 17:25:12 2020
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Mon Jun 22 17:54:24 2020
 <BR><P>
 <H3>Maximum Stack Usage =        552 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -239,14 +239,15 @@ Global Symbols
 <P><STRONG><a name="[2c]"></a>main</STRONG> (Thumb, 84 bytes, Stack size 0 bytes, peripheral_main.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 256<LI>Call Chain = main &rArr; Peripheral_Init &rArr; GAPBondMgr_SetParameter &rArr; gapBondMgrEraseAllBondings &rArr; gapBondMgrEraseBonding &rArr; tmos_snv_read &rArr; tmos_memory_free
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Weak_Source_Init
-<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART1_DefInit
-<LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TMOS_SystemProcess
+<BR>[Calls]<UL><LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Weak_Source_Init
+<LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART1_DefInit
+<LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TMOS_SystemProcess
 <LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Sleep_Init
-<LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_Init
+<LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_Init
+<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOB_ModeCfg
 <LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOA_ModeCfg
-<LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GAPRole_PeripheralInit
-<LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CH57X_BLEInit
+<LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GAPRole_PeripheralInit
+<LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CH57X_BLEInit
 <LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Peripheral_Init
 <LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
@@ -255,16 +256,16 @@ Global Symbols
 <P><STRONG><a name="[a5]"></a>DevInfo_AddService</STRONG> (Thumb, 16 bytes, Stack size 8 bytes, devinfoservice.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 96<LI>Call Chain = DevInfo_AddService &rArr; GATTServApp_RegisterService &rArr; GATT_RegisterService &rArr; ATT_CompareUUID &rArr; ATT_ConvertUUIDto128
 </UL>
-<BR>[Calls]<UL><LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GATTServApp_RegisterService
+<BR>[Calls]<UL><LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GATTServApp_RegisterService
 </UL>
 <BR>[Called By]<UL><LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Peripheral_Init
 </UL>
 
-<P><STRONG><a name="[bc]"></a>DevInfo_SetParameter</STRONG> (Thumb, 36 bytes, Stack size 24 bytes, devinfoservice.o(.text), UNUSED)
+<P><STRONG><a name="[bd]"></a>DevInfo_SetParameter</STRONG> (Thumb, 36 bytes, Stack size 24 bytes, devinfoservice.o(.text), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tmos_memcpy
 </UL>
 
-<P><STRONG><a name="[bd]"></a>DevInfo_GetParameter</STRONG> (Thumb, 144 bytes, Stack size 16 bytes, devinfoservice.o(.text), UNUSED)
+<P><STRONG><a name="[be]"></a>DevInfo_GetParameter</STRONG> (Thumb, 144 bytes, Stack size 16 bytes, devinfoservice.o(.text), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tmos_memcpy
 <LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ARM_common_switch8
 </UL>
@@ -272,9 +273,9 @@ Global Symbols
 <P><STRONG><a name="[a6]"></a>SimpleProfile_AddService</STRONG> (Thumb, 48 bytes, Stack size 16 bytes, gattprofile.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 104<LI>Call Chain = SimpleProfile_AddService &rArr; GATTServApp_RegisterService &rArr; GATT_RegisterService &rArr; ATT_CompareUUID &rArr; ATT_ConvertUUIDto128
 </UL>
-<BR>[Calls]<UL><LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;linkDB_Register
-<LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GATTServApp_InitCharCfg
-<LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GATTServApp_RegisterService
+<BR>[Calls]<UL><LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;linkDB_Register
+<LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GATTServApp_InitCharCfg
+<LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GATTServApp_RegisterService
 </UL>
 <BR>[Called By]<UL><LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Peripheral_Init
 </UL>
@@ -304,8 +305,8 @@ Global Symbols
 <P><STRONG><a name="[92]"></a>simpleProfile_Notify</STRONG> (Thumb, 48 bytes, Stack size 16 bytes, gattprofile.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 336<LI>Call Chain = simpleProfile_Notify &rArr; GATT_Notification &rArr; ATT_HandleValueNoti &rArr; attSendMsg &rArr; SM_GenerateAuthenSig &rArr; sm_CMAC &rArr; generate_subkey &rArr; LL_Encrypt &rArr; AES128_ECB_encrypt &rArr; MixColumns
 </UL>
-<BR>[Calls]<UL><LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GATT_Notification
-<LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GATTServApp_ReadCharCfg
+<BR>[Calls]<UL><LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GATT_Notification
+<LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GATTServApp_ReadCharCfg
 </UL>
 <BR>[Called By]<UL><LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;peripheralChar4Notify
 </UL>
@@ -395,12 +396,12 @@ Global Symbols
 <P><STRONG><a name="[2f]"></a>SystemInit</STRONG> (Thumb, 40 bytes, Stack size 8 bytes, ch57x_clk.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = SystemInit &rArr; PowerMonitor &rArr; mDelayuS
 </UL>
-<BR>[Calls]<UL><LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mDelayuS
-<LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PowerMonitor
+<BR>[Calls]<UL><LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mDelayuS
+<LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PowerMonitor
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_armcm0.o(.text)
 </UL>
-<P><STRONG><a name="[c6]"></a>SetSysClock</STRONG> (Thumb, 342 bytes, Stack size 4 bytes, ch57x_clk.o(.text))
+<P><STRONG><a name="[c7]"></a>SetSysClock</STRONG> (Thumb, 342 bytes, Stack size 4 bytes, ch57x_clk.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = SetSysClock &rArr; __ARM_common_switch8
 </UL>
 <BR>[Calls]<UL><LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ARM_common_switch8
@@ -409,10 +410,10 @@ Global Symbols
 <LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Sleep_Init
 </UL>
 
-<P><STRONG><a name="[c7]"></a>GetSysClock</STRONG> (Thumb, 68 bytes, Stack size 8 bytes, ch57x_clk.o(.text))
+<P><STRONG><a name="[c8]"></a>GetSysClock</STRONG> (Thumb, 68 bytes, Stack size 8 bytes, ch57x_clk.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 36<LI>Call Chain = GetSysClock &rArr; __aeabi_idivmod &rArr; __aeabi_uidivmod
 </UL>
-<BR>[Calls]<UL><LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_idivmod
+<BR>[Calls]<UL><LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_idivmod
 </UL>
 <BR>[Called By]<UL><LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART1_BaudRateCfg
 </UL>
@@ -421,33 +422,33 @@ Global Symbols
 
 <P><STRONG><a name="[365]"></a>LClk32K_Select</STRONG> (Thumb, 56 bytes, Stack size 0 bytes, ch57x_clk.o(.text), UNUSED)
 
-<P><STRONG><a name="[c9]"></a>Calibration_LSI</STRONG> (Thumb, 476 bytes, Stack size 56 bytes, ch57x_clk.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_idivmod
-<LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
+<P><STRONG><a name="[ca]"></a>Calibration_LSI</STRONG> (Thumb, 476 bytes, Stack size 56 bytes, ch57x_clk.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_idivmod
+<LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
 </UL>
 
-<P><STRONG><a name="[cb]"></a>RTC_InitTime</STRONG> (Thumb, 144 bytes, Stack size 48 bytes, ch57x_clk.o(.text))
+<P><STRONG><a name="[cc]"></a>RTC_InitTime</STRONG> (Thumb, 144 bytes, Stack size 48 bytes, ch57x_clk.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 60<LI>Call Chain = RTC_InitTime &rArr; __aeabi_uidivmod
 </UL>
-<BR>[Calls]<UL><LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
+<BR>[Calls]<UL><LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
 </UL>
 <BR>[Called By]<UL><LI><a href="#[dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TimeInit
 </UL>
 
-<P><STRONG><a name="[cc]"></a>RTC_GetTime</STRONG> (Thumb, 118 bytes, Stack size 40 bytes, ch57x_clk.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
+<P><STRONG><a name="[cd]"></a>RTC_GetTime</STRONG> (Thumb, 118 bytes, Stack size 40 bytes, ch57x_clk.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
 </UL>
 
 <P><STRONG><a name="[366]"></a>RTC_SetCycle32k</STRONG> (Thumb, 40 bytes, Stack size 0 bytes, ch57x_clk.o(.text), UNUSED)
 
-<P><STRONG><a name="[ce]"></a>RTC_GetCycle32k</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, ch57x_clk.o(.text), UNUSED)
-<BR><BR>[Called By]<UL><LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_TRIGFunCfg
+<P><STRONG><a name="[cf]"></a>RTC_GetCycle32k</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, ch57x_clk.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_TRIGFunCfg
 </UL>
 
 <P><STRONG><a name="[367]"></a>RTC_TMRFunCfg</STRONG> (Thumb, 50 bytes, Stack size 0 bytes, ch57x_clk.o(.text), UNUSED)
 
-<P><STRONG><a name="[cd]"></a>RTC_TRIGFunCfg</STRONG> (Thumb, 62 bytes, Stack size 4 bytes, ch57x_clk.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_GetCycle32k
+<P><STRONG><a name="[ce]"></a>RTC_TRIGFunCfg</STRONG> (Thumb, 62 bytes, Stack size 4 bytes, ch57x_clk.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_GetCycle32k
 </UL>
 
 <P><STRONG><a name="[368]"></a>RTC_ModeFunDisable</STRONG> (Thumb, 52 bytes, Stack size 0 bytes, ch57x_clk.o(.text), UNUSED)
@@ -462,22 +463,23 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ARM_common_switch8
 </UL>
 <BR>[Called By]<UL><LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GotoCutPower
-<LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Weak_Source_Init
+<LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Weak_Source_Init
 <LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Sleep_Init
 <LI><a href="#[2c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[cf]"></a>GPIOB_ModeCfg</STRONG> (Thumb, 166 bytes, Stack size 4 bytes, ch57x_gpio.o(.text))
+<P><STRONG><a name="[b5]"></a>GPIOB_ModeCfg</STRONG> (Thumb, 166 bytes, Stack size 4 bytes, ch57x_gpio.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = GPIOB_ModeCfg &rArr; __ARM_common_switch8
 </UL>
 <BR>[Calls]<UL><LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ARM_common_switch8
 </UL>
 <BR>[Called By]<UL><LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GotoCutPower
 <LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Sleep_Init
+<LI><a href="#[2c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
 <P><STRONG><a name="[e4]"></a>GPIOA_ITModeCfg</STRONG> (Thumb, 116 bytes, Stack size 0 bytes, ch57x_gpio.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Weak_Source_Init
+<BR><BR>[Called By]<UL><LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Weak_Source_Init
 </UL>
 
 <P><STRONG><a name="[36b]"></a>GPIOB_ITModeCfg</STRONG> (Thumb, 140 bytes, Stack size 0 bytes, ch57x_gpio.o(.text), UNUSED)
@@ -490,7 +492,7 @@ Global Symbols
 <BR>[Address Reference Count : 1]<UL><LI> startup_armcm0.o(RESET)
 </UL>
 <P><STRONG><a name="[d0]"></a>PWR_DCDCCfg</STRONG> (Thumb, 110 bytes, Stack size 8 bytes, ch57x_pwr.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mDelayuS
+<BR><BR>[Calls]<UL><LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mDelayuS
 </UL>
 
 <P><STRONG><a name="[36e]"></a>PWR_UnitModCfg</STRONG> (Thumb, 154 bytes, Stack size 0 bytes, ch57x_pwr.o(.text), UNUSED)
@@ -498,13 +500,13 @@ Global Symbols
 <P><STRONG><a name="[36f]"></a>PWR_PeriphClkCfg</STRONG> (Thumb, 62 bytes, Stack size 0 bytes, ch57x_pwr.o(.text), UNUSED)
 
 <P><STRONG><a name="[e5]"></a>PWR_PeriphWakeUpCfg</STRONG> (Thumb, 62 bytes, Stack size 0 bytes, ch57x_pwr.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Weak_Source_Init
+<BR><BR>[Called By]<UL><LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Weak_Source_Init
 </UL>
 
-<P><STRONG><a name="[c5]"></a>PowerMonitor</STRONG> (Thumb, 90 bytes, Stack size 8 bytes, ch57x_pwr.o(.text))
+<P><STRONG><a name="[c6]"></a>PowerMonitor</STRONG> (Thumb, 90 bytes, Stack size 8 bytes, ch57x_pwr.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = PowerMonitor &rArr; mDelayuS
 </UL>
-<BR>[Calls]<UL><LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mDelayuS
+<BR>[Calls]<UL><LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mDelayuS
 </UL>
 <BR>[Called By]<UL><LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LowPower_Shutdown
 <LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LowPower_Sleep
@@ -516,19 +518,19 @@ Global Symbols
 <P><STRONG><a name="[370]"></a>LowPower_Idle</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, ch57x_pwr.o(.text), UNUSED)
 
 <P><STRONG><a name="[d1]"></a>LowPower_Halt_1</STRONG> (Thumb, 122 bytes, Stack size 8 bytes, ch57x_pwr.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PowerMonitor
+<BR><BR>[Calls]<UL><LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PowerMonitor
 </UL>
 
 <P><STRONG><a name="[d2]"></a>LowPower_Halt_2</STRONG> (Thumb, 122 bytes, Stack size 8 bytes, ch57x_pwr.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PowerMonitor
+<BR><BR>[Calls]<UL><LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PowerMonitor
 </UL>
 
 <P><STRONG><a name="[d3]"></a>LowPower_Sleep</STRONG> (Thumb, 130 bytes, Stack size 16 bytes, ch57x_pwr.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PowerMonitor
+<BR><BR>[Calls]<UL><LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PowerMonitor
 </UL>
 
 <P><STRONG><a name="[d4]"></a>LowPower_Shutdown</STRONG> (Thumb, 144 bytes, Stack size 16 bytes, ch57x_pwr.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PowerMonitor
+<BR><BR>[Calls]<UL><LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PowerMonitor
 </UL>
 <BR>[Called By]<UL><LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GotoCutPower
 </UL>
@@ -552,19 +554,19 @@ Global Symbols
 
 <P><STRONG><a name="[378]"></a>WWDG_ClearFlag</STRONG> (Thumb, 28 bytes, Stack size 0 bytes, ch57x_sys.o(.text), UNUSED)
 
-<P><STRONG><a name="[c4]"></a>mDelayuS</STRONG> (Thumb, 34 bytes, Stack size 8 bytes, ch57x_sys.o(.text))
+<P><STRONG><a name="[c5]"></a>mDelayuS</STRONG> (Thumb, 34 bytes, Stack size 8 bytes, ch57x_sys.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = mDelayuS
 </UL>
 <BR>[Called By]<UL><LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mDelaymS
 <LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PWR_DCDCCfg
-<LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PowerMonitor
+<LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PowerMonitor
 <LI><a href="#[2f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemInit
 </UL>
 
 <P><STRONG><a name="[d5]"></a>mDelaymS</STRONG> (Thumb, 26 bytes, Stack size 12 bytes, ch57x_sys.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = mDelaymS &rArr; mDelayuS
 </UL>
-<BR>[Calls]<UL><LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mDelayuS
+<BR>[Calls]<UL><LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mDelayuS
 </UL>
 <BR>[Called By]<UL><LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GotoCutPower
 <LI><a href="#[19]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_IRQHandler
@@ -576,13 +578,13 @@ Global Symbols
 <P><STRONG><a name="[d6]"></a>UART1_BaudRateCfg</STRONG> (Thumb, 40 bytes, Stack size 16 bytes, ch57x_uart1.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 52<LI>Call Chain = UART1_BaudRateCfg &rArr; GetSysClock &rArr; __aeabi_idivmod &rArr; __aeabi_uidivmod
 </UL>
-<BR>[Calls]<UL><LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GetSysClock
-<LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
+<BR>[Calls]<UL><LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GetSysClock
+<LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
 </UL>
-<BR>[Called By]<UL><LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART1_DefInit
+<BR>[Called By]<UL><LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART1_DefInit
 </UL>
 
-<P><STRONG><a name="[b5]"></a>UART1_DefInit</STRONG> (Thumb, 30 bytes, Stack size 8 bytes, ch57x_uart1.o(.text))
+<P><STRONG><a name="[b6]"></a>UART1_DefInit</STRONG> (Thumb, 30 bytes, Stack size 8 bytes, ch57x_uart1.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 60<LI>Call Chain = UART1_DefInit &rArr; UART1_BaudRateCfg &rArr; GetSysClock &rArr; __aeabi_idivmod &rArr; __aeabi_uidivmod
 </UL>
 <BR>[Calls]<UL><LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART1_BaudRateCfg
@@ -605,7 +607,7 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> mcu.o(.text)
 </UL>
-<P><STRONG><a name="[b7]"></a>CH57X_BLEInit</STRONG> (Thumb, 212 bytes, Stack size 64 bytes, mcu.o(.text))
+<P><STRONG><a name="[b8]"></a>CH57X_BLEInit</STRONG> (Thumb, 212 bytes, Stack size 64 bytes, mcu.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 144<LI>Call Chain = CH57X_BLEInit &rArr; BLE_LibInit &rArr; TMOS_Init &rArr; tmos_snv_init &rArr; tmos_snv_clear &rArr; tmos_memory_free
 </UL>
 <BR>[Calls]<UL><LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tmos_memset
@@ -629,7 +631,7 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> mcu.o(.text)
 </UL>
-<P><STRONG><a name="[b8]"></a>HAL_Init</STRONG> (Thumb, 36 bytes, Stack size 8 bytes, mcu.o(.text))
+<P><STRONG><a name="[b9]"></a>HAL_Init</STRONG> (Thumb, 44 bytes, Stack size 8 bytes, mcu.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 76<LI>Call Chain = HAL_Init &rArr; HAL_TimeInit &rArr; RTC_InitTime &rArr; __aeabi_uidivmod
 </UL>
 <BR>[Calls]<UL><LI><a href="#[dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TimeInit
@@ -646,7 +648,7 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_armcm0.o(RESET)
 </UL>
-<P><STRONG><a name="[19]"></a>GPIO_IRQHandler</STRONG> (Thumb, 76 bytes, Stack size 8 bytes, mcu.o(.text))
+<P><STRONG><a name="[19]"></a>GPIO_IRQHandler</STRONG> (Thumb, 82 bytes, Stack size 8 bytes, mcu.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = GPIO_IRQHandler &rArr; __2printf
 </UL>
 <BR>[Calls]<UL><LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mDelaymS
@@ -663,9 +665,9 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 68<LI>Call Chain = HAL_TimeInit &rArr; RTC_InitTime &rArr; __aeabi_uidivmod
 </UL>
 <BR>[Calls]<UL><LI><a href="#[df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TMOS_TimerInit
-<LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_InitTime
+<LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_InitTime
 </UL>
-<BR>[Called By]<UL><LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_Init
+<BR>[Called By]<UL><LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_Init
 </UL>
 
 <P><STRONG><a name="[dc]"></a>ConsumeHeat</STRONG> (Thumb, 52 bytes, Stack size 40 bytes, dataprocessing.o(.text))
@@ -681,23 +683,23 @@ Global Symbols
 <P><STRONG><a name="[e3]"></a>GotoCutPower</STRONG> (Thumb, 58 bytes, Stack size 8 bytes, dataprocessing.o(.text), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mDelaymS
 <LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LowPower_Shutdown
-<LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOB_ModeCfg
-<LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetSysClock
+<LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetSysClock
+<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOB_ModeCfg
 <LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOA_ModeCfg
 <LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
 
 <P><STRONG><a name="[b3]"></a>Sleep_Init</STRONG> (Thumb, 26 bytes, Stack size 8 bytes, dataprocessing.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = Sleep_Init &rArr; GPIOB_ModeCfg &rArr; __ARM_common_switch8
+<BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = Sleep_Init &rArr; SetSysClock &rArr; __ARM_common_switch8
 </UL>
-<BR>[Calls]<UL><LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOB_ModeCfg
-<LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetSysClock
+<BR>[Calls]<UL><LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetSysClock
+<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOB_ModeCfg
 <LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOA_ModeCfg
 </UL>
 <BR>[Called By]<UL><LI><a href="#[2c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[b6]"></a>Weak_Source_Init</STRONG> (Thumb, 38 bytes, Stack size 8 bytes, dataprocessing.o(.text))
+<P><STRONG><a name="[b7]"></a>Weak_Source_Init</STRONG> (Thumb, 38 bytes, Stack size 8 bytes, dataprocessing.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = Weak_Source_Init &rArr; GPIOA_ModeCfg &rArr; __ARM_common_switch8
 </UL>
 <BR>[Calls]<UL><LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PWR_PeriphWakeUpCfg
@@ -709,13 +711,13 @@ Global Symbols
 
 <P><STRONG><a name="[37f]"></a>__aeabi_uidiv</STRONG> (Thumb, 0 bytes, Stack size 12 bytes, uidiv.o(.text), UNUSED)
 
-<P><STRONG><a name="[ca]"></a>__aeabi_uidivmod</STRONG> (Thumb, 44 bytes, Stack size 12 bytes, uidiv.o(.text))
+<P><STRONG><a name="[cb]"></a>__aeabi_uidivmod</STRONG> (Thumb, 44 bytes, Stack size 12 bytes, uidiv.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = __aeabi_uidivmod
 </UL>
 <BR>[Called By]<UL><LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART1_BaudRateCfg
-<LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_GetTime
-<LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_InitTime
-<LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Calibration_LSI
+<LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_GetTime
+<LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_InitTime
+<LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Calibration_LSI
 <LI><a href="#[2c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gattServApp_ProcessReadByTypeReq
 <LI><a href="#[2c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gattServApp_ProcessReadByGrpTypeReq
 <LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gattProcessFindInfoReq
@@ -726,18 +728,18 @@ Global Symbols
 <LI><a href="#[30d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ll_connect_change_connect_point
 <LI><a href="#[2de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;l2capStartTimer
 <LI><a href="#[115]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RemoteConnParamReqReply
-<LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_idivmod
+<LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_idivmod
 </UL>
 
 <P><STRONG><a name="[380]"></a>__aeabi_idiv</STRONG> (Thumb, 0 bytes, Stack size 16 bytes, idiv.o(.text), UNUSED)
 
-<P><STRONG><a name="[c8]"></a>__aeabi_idivmod</STRONG> (Thumb, 40 bytes, Stack size 16 bytes, idiv.o(.text))
+<P><STRONG><a name="[c9]"></a>__aeabi_idivmod</STRONG> (Thumb, 40 bytes, Stack size 16 bytes, idiv.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 28<LI>Call Chain = __aeabi_idivmod &rArr; __aeabi_uidivmod
 </UL>
-<BR>[Calls]<UL><LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
+<BR>[Calls]<UL><LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
 </UL>
-<BR>[Called By]<UL><LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Calibration_LSI
-<LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GetSysClock
+<BR>[Called By]<UL><LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Calibration_LSI
+<LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GetSysClock
 <LI><a href="#[14e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RFEND_TXCtune
 <LI><a href="#[2ff]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ll_connect_init_pingOffset
 <LI><a href="#[2a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gapWriteAdvEnableStatus
@@ -922,7 +924,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[ff]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ll_connect_get_connect_number
 </UL>
-<BR>[Called By]<UL><LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GATT_Notification
+<BR>[Called By]<UL><LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GATT_Notification
 </UL>
 
 <P><STRONG><a name="[100]"></a>API_HostNumCompletedPktCmd</STRONG> (Thumb, 46 bytes, Stack size 8 bytes, api_c.o(i.API_HostNumCompletedPktCmd))
@@ -1248,7 +1250,7 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[133]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tmos_bm_adjust_header
 <LI><a href="#[139]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;attSendMsg
 </UL>
-<BR>[Called By]<UL><LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GATT_Notification
+<BR>[Called By]<UL><LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GATT_Notification
 </UL>
 
 <P><STRONG><a name="[1da]"></a>ATT_ParamInit</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, att.o(i.ATT_ParamInit))
@@ -1411,7 +1413,7 @@ Global Symbols
 </UL>
 <BR>[Called By]<UL><LI><a href="#[282]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ble_timeout_process
 <LI><a href="#[1d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LLE_IRQHandler
-<LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TMOS_SystemProcess
+<LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TMOS_SystemProcess
 <LI><a href="#[237]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ble_ll_hw_api_shut
 </UL>
 
@@ -1423,7 +1425,7 @@ Global Symbols
 <LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tmos_memset
 <LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tmos_memcpy
 </UL>
-<BR>[Called By]<UL><LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CH57X_BLEInit
+<BR>[Called By]<UL><LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CH57X_BLEInit
 </UL>
 
 <P><STRONG><a name="[147]"></a>BLE_RegInit</STRONG> (Thumb, 58 bytes, Stack size 8 bytes, ip.o(i.BLE_RegInit))
@@ -1487,7 +1489,7 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[155]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GAPBondMgr_ParamInit
 <LI><a href="#[156]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gapBondMgrReadBonds
 </UL>
-<BR>[Called By]<UL><LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GAPRole_PeripheralInit
+<BR>[Called By]<UL><LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GAPRole_PeripheralInit
 </UL>
 
 <P><STRONG><a name="[157]"></a>GAPBondMgr_LinkEst</STRONG> (Thumb, 298 bytes, Stack size 96 bytes, gapbondmgr.o(i.GAPBondMgr_LinkEst))
@@ -1693,10 +1695,10 @@ Global Symbols
 <LI><a href="#[183]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GAP_RegisterForMsgs
 <LI><a href="#[15b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tmos_snv_read
 </UL>
-<BR>[Called By]<UL><LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GAPRole_PeripheralInit
+<BR>[Called By]<UL><LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GAPRole_PeripheralInit
 </UL>
 
-<P><STRONG><a name="[b9]"></a>GAPRole_PeripheralInit</STRONG> (Thumb, 72 bytes, Stack size 8 bytes, role.o(i.GAPRole_PeripheralInit))
+<P><STRONG><a name="[ba]"></a>GAPRole_PeripheralInit</STRONG> (Thumb, 72 bytes, Stack size 8 bytes, role.o(i.GAPRole_PeripheralInit))
 <BR><BR>[Stack]<UL><LI>Max Depth = 188<LI>Call Chain = GAPRole_PeripheralInit &rArr; LL_SlaveEnalbe &rArr; LL_AdvertiseEnalbe &rArr; LL_Init &rArr; BLE_IPCoreInit &rArr; BLE_RegInit &rArr; RFEND_TXCtune &rArr; __aeabi_idivmod &rArr; __aeabi_uidivmod
 </UL>
 <BR>[Calls]<UL><LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TMOS_ProcessEventRegister
@@ -1873,7 +1875,7 @@ Global Symbols
 <LI><a href="#[180]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GAPRole_ParamInit
 <LI><a href="#[1a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GAP_ParamInit
 </UL>
-<BR>[Called By]<UL><LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GAPRole_PeripheralInit
+<BR>[Called By]<UL><LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GAPRole_PeripheralInit
 </UL>
 
 <P><STRONG><a name="[18d]"></a>GAP_MakeDiscoverable</STRONG> (Thumb, 192 bytes, Stack size 40 bytes, gap_peripheral.o(i.GAP_MakeDiscoverable))
@@ -2048,7 +2050,7 @@ Global Symbols
 <P><STRONG><a name="[a4]"></a>GATTServApp_AddService</STRONG> (Thumb, 40 bytes, Stack size 8 bytes, gattservapp.o(i.GATTServApp_AddService))
 <BR><BR>[Stack]<UL><LI>Max Depth = 96<LI>Call Chain = GATTServApp_AddService &rArr; GATTServApp_RegisterService &rArr; GATT_RegisterService &rArr; ATT_CompareUUID &rArr; ATT_ConvertUUIDto128
 </UL>
-<BR>[Calls]<UL><LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GATTServApp_RegisterService
+<BR>[Calls]<UL><LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GATTServApp_RegisterService
 </UL>
 <BR>[Called By]<UL><LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Peripheral_Init
 </UL>
@@ -2057,15 +2059,15 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 44<LI>Call Chain = GATTServApp_Init &rArr; GATTServApp_ParamInit
 </UL>
 <BR>[Calls]<UL><LI><a href="#[167]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tmos_memory_allocate
-<LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;linkDB_Register
-<LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GATTServApp_InitCharCfg
+<LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;linkDB_Register
+<LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GATTServApp_InitCharCfg
 <LI><a href="#[1c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GATTServApp_ParamInit
 <LI><a href="#[1c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GGS_ParamInit
 </UL>
-<BR>[Called By]<UL><LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GAPRole_PeripheralInit
+<BR>[Called By]<UL><LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GAPRole_PeripheralInit
 </UL>
 
-<P><STRONG><a name="[bf]"></a>GATTServApp_InitCharCfg</STRONG> (Thumb, 42 bytes, Stack size 16 bytes, gattservapp.o(i.GATTServApp_InitCharCfg))
+<P><STRONG><a name="[c0]"></a>GATTServApp_InitCharCfg</STRONG> (Thumb, 42 bytes, Stack size 16 bytes, gattservapp.o(i.GATTServApp_InitCharCfg))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = GATTServApp_InitCharCfg
 </UL>
 <BR>[Calls]<UL><LI><a href="#[1c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gattServApp_FindCharCfgItem
@@ -2082,10 +2084,10 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[189]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GATTServApp_Init
 </UL>
 
-<P><STRONG><a name="[c3]"></a>GATTServApp_ProcessCCCWriteReq</STRONG> (Thumb, 74 bytes, Stack size 24 bytes, gattservapp.o(i.GATTServApp_ProcessCCCWriteReq))
+<P><STRONG><a name="[c4]"></a>GATTServApp_ProcessCCCWriteReq</STRONG> (Thumb, 74 bytes, Stack size 24 bytes, gattservapp.o(i.GATTServApp_ProcessCCCWriteReq))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = GATTServApp_ProcessCCCWriteReq &rArr; GATTServApp_WriteCharCfg
 </UL>
-<BR>[Calls]<UL><LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GATTServApp_ReadCharCfg
+<BR>[Calls]<UL><LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GATTServApp_ReadCharCfg
 <LI><a href="#[1c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GATTServApp_WriteCharCfg
 </UL>
 <BR>[Called By]<UL><LI><a href="#[6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;simpleProfile_WriteAttrCB
@@ -2107,7 +2109,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[1cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tmos_strlen
 <LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tmos_memset
-<LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GATTServApp_ReadCharCfg
+<LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GATTServApp_ReadCharCfg
 <LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tmos_memcpy
 <LI><a href="#[12c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ATT_CompareUUID
 <LI><a href="#[1c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gattServApp_FindServiceCBs
@@ -2123,12 +2125,12 @@ Global Symbols
 <LI><a href="#[16c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gapBondMgr_SyncCharCfg
 </UL>
 
-<P><STRONG><a name="[c1]"></a>GATTServApp_ReadCharCfg</STRONG> (Thumb, 14 bytes, Stack size 8 bytes, gattservapp.o(i.GATTServApp_ReadCharCfg))
+<P><STRONG><a name="[c2]"></a>GATTServApp_ReadCharCfg</STRONG> (Thumb, 14 bytes, Stack size 8 bytes, gattservapp.o(i.GATTServApp_ReadCharCfg))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = GATTServApp_ReadCharCfg
 </UL>
 <BR>[Calls]<UL><LI><a href="#[1c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gattServApp_FindCharCfgItem
 </UL>
-<BR>[Called By]<UL><LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GATTServApp_ProcessCCCWriteReq
+<BR>[Called By]<UL><LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GATTServApp_ProcessCCCWriteReq
 <LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;simpleProfile_Notify
 <LI><a href="#[15f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GATTServApp_SendServiceChangedInd
 <LI><a href="#[1c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GATTServApp_ReadAttr
@@ -2138,7 +2140,7 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[168]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GAPBondMgr_PeripheralRegister
 </UL>
 
-<P><STRONG><a name="[bb]"></a>GATTServApp_RegisterService</STRONG> (Thumb, 92 bytes, Stack size 24 bytes, gattservapp.o(i.GATTServApp_RegisterService))
+<P><STRONG><a name="[bc]"></a>GATTServApp_RegisterService</STRONG> (Thumb, 92 bytes, Stack size 24 bytes, gattservapp.o(i.GATTServApp_RegisterService))
 <BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = GATTServApp_RegisterService &rArr; GATT_RegisterService &rArr; ATT_CompareUUID &rArr; ATT_ConvertUUIDto128
 </UL>
 <BR>[Calls]<UL><LI><a href="#[167]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tmos_memory_allocate
@@ -2162,7 +2164,7 @@ Global Symbols
 <P><STRONG><a name="[15f]"></a>GATTServApp_SendServiceChangedInd</STRONG> (Thumb, 30 bytes, Stack size 16 bytes, gattservapp.o(i.GATTServApp_SendServiceChangedInd))
 <BR><BR>[Stack]<UL><LI>Max Depth = 392<LI>Call Chain = GATTServApp_SendServiceChangedInd &rArr; GATT_ServiceChangedInd &rArr; GATT_Indication &rArr; ATT_HandleValueInd &rArr; attSendMsg &rArr; SM_GenerateAuthenSig &rArr; sm_CMAC &rArr; generate_subkey &rArr; LL_Encrypt &rArr; AES128_ECB_encrypt &rArr; MixColumns
 </UL>
-<BR>[Calls]<UL><LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GATTServApp_ReadCharCfg
+<BR>[Calls]<UL><LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GATTServApp_ReadCharCfg
 <LI><a href="#[1cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GATT_ServiceChangedInd
 </UL>
 <BR>[Called By]<UL><LI><a href="#[157]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GAPBondMgr_LinkEst
@@ -2194,7 +2196,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[1c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gattServApp_FindCharCfgItem
 </UL>
-<BR>[Called By]<UL><LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GATTServApp_ProcessCCCWriteReq
+<BR>[Called By]<UL><LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GATTServApp_ProcessCCCWriteReq
 </UL>
 
 <P><STRONG><a name="[1d1]"></a>GATT_AppCompletedMsg</STRONG> (Thumb, 42 bytes, Stack size 8 bytes, gatt.o(i.GATT_AppCompletedMsg))
@@ -2208,7 +2210,7 @@ Global Symbols
 <P><STRONG><a name="[1c9]"></a>GATT_FindHandle</STRONG> (Thumb, 68 bytes, Stack size 20 bytes, gattservapp.o(i.GATT_FindHandle))
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = GATT_FindHandle
 </UL>
-<BR>[Called By]<UL><LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GATT_Notification
+<BR>[Called By]<UL><LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GATT_Notification
 <LI><a href="#[2c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gattServApp_ProcessWriteReq
 <LI><a href="#[2c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gattServApp_ProcessReadMultiReq
 <LI><a href="#[2c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gattServApp_ProcessPrepareWriteReq
@@ -2274,20 +2276,20 @@ Global Symbols
 <LI><a href="#[1da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ATT_ParamInit
 <LI><a href="#[1aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;L2CAP_RegisterApp
 </UL>
-<BR>[Called By]<UL><LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GAPRole_PeripheralInit
+<BR>[Called By]<UL><LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GAPRole_PeripheralInit
 </UL>
 
 <P><STRONG><a name="[1db]"></a>GATT_InitServer</STRONG> (Thumb, 60 bytes, Stack size 16 bytes, gattservapp.o(i.GATT_InitServer))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = GATT_InitServer
 </UL>
-<BR>[Calls]<UL><LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;linkDB_Register
+<BR>[Calls]<UL><LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;linkDB_Register
 <LI><a href="#[1dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ATT_RegisterServer
 <LI><a href="#[1dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gattRegisterServer
 </UL>
 <BR>[Called By]<UL><LI><a href="#[187]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GATT_Init
 </UL>
 
-<P><STRONG><a name="[c2]"></a>GATT_Notification</STRONG> (Thumb, 84 bytes, Stack size 24 bytes, gattservapp.o(i.GATT_Notification))
+<P><STRONG><a name="[c3]"></a>GATT_Notification</STRONG> (Thumb, 84 bytes, Stack size 24 bytes, gattservapp.o(i.GATT_Notification))
 <BR><BR>[Stack]<UL><LI>Max Depth = 320<LI>Call Chain = GATT_Notification &rArr; ATT_HandleValueNoti &rArr; attSendMsg &rArr; SM_GenerateAuthenSig &rArr; sm_CMAC &rArr; generate_subkey &rArr; LL_Encrypt &rArr; AES128_ECB_encrypt &rArr; MixColumns
 </UL>
 <BR>[Calls]<UL><LI><a href="#[1d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;linkDB_Authen
@@ -2331,7 +2333,7 @@ Global Symbols
 <LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tmos_memcpy
 <LI><a href="#[12c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ATT_CompareUUID
 </UL>
-<BR>[Called By]<UL><LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GATTServApp_RegisterService
+<BR>[Called By]<UL><LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GATTServApp_RegisterService
 </UL>
 
 <P><STRONG><a name="[1cf]"></a>GATT_ServiceChangedInd</STRONG> (Thumb, 112 bytes, Stack size 32 bytes, gatt.o(i.GATT_ServiceChangedInd))
@@ -2350,7 +2352,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[1e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gattFindService
 </UL>
-<BR>[Called By]<UL><LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GATT_Notification
+<BR>[Called By]<UL><LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GATT_Notification
 <LI><a href="#[1e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GATT_VerifyWritePermissions
 <LI><a href="#[1e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GATT_VerifyReadPermissions
 <LI><a href="#[1e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GATT_VerifyPrepareWritePermissions
@@ -2438,7 +2440,7 @@ Global Symbols
 <P><STRONG><a name="[a3]"></a>GGS_AddService</STRONG> (Thumb, 40 bytes, Stack size 8 bytes, gapgattserver.o(i.GGS_AddService))
 <BR><BR>[Stack]<UL><LI>Max Depth = 96<LI>Call Chain = GGS_AddService &rArr; GATTServApp_RegisterService &rArr; GATT_RegisterService &rArr; ATT_CompareUUID &rArr; ATT_ConvertUUIDto128
 </UL>
-<BR>[Calls]<UL><LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GATTServApp_RegisterService
+<BR>[Calls]<UL><LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GATTServApp_RegisterService
 </UL>
 <BR>[Called By]<UL><LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Peripheral_Init
 </UL>
@@ -3072,10 +3074,10 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[167]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tmos_memory_allocate
 <LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tmos_memset
-<LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;linkDB_Register
+<LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;linkDB_Register
 <LI><a href="#[225]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;linkDB_Init
 </UL>
-<BR>[Called By]<UL><LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GAPRole_PeripheralInit
+<BR>[Called By]<UL><LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GAPRole_PeripheralInit
 </UL>
 
 <P><STRONG><a name="[2e3]"></a>L2CAP_ParseConnectReq</STRONG> (Thumb, 62 bytes, Stack size 0 bytes, l2cap.o(i.L2CAP_ParseConnectReq))
@@ -3110,7 +3112,7 @@ Global Symbols
 <P><STRONG><a name="[228]"></a>L2CAP_SendData</STRONG> (Thumb, 112 bytes, Stack size 16 bytes, l2cap_output.o(i.L2CAP_SendData))
 <BR><BR>[Stack]<UL><LI>Max Depth = 120<LI>Call Chain = L2CAP_SendData &rArr; l2capEncapSendData &rArr; HCI_SendDataPkt &rArr; API_SendDataPkt &rArr; LL_SendDataPkt &rArr; tmos_memory_free
 </UL>
-<BR>[Calls]<UL><LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;linkDB_State
+<BR>[Calls]<UL><LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;linkDB_State
 <LI><a href="#[137]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;linkDB_MTU
 <LI><a href="#[229]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;l2capEncapSendData
 </UL>
@@ -3398,7 +3400,7 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 44<LI>Call Chain = LL_HopGetChannel &rArr; __aeabi_uidivmod
 </UL>
 <BR>[Calls]<UL><LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_llsl
-<LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
+<LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
 </UL>
 <BR>[Called By]<UL><LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ll_slave_process_event
 </UL>
@@ -3585,7 +3587,7 @@ Global Symbols
 <LI><a href="#[23c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ll_connect_update_get_offset
 <LI><a href="#[ff]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ll_connect_get_connect_number
 <LI><a href="#[239]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_CoreGetCore
-<LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
+<LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
 <LI><a href="#[23b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ll_get_prime_number
 </UL>
 <BR>[Called By]<UL><LI><a href="#[114]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;API_LE_RemoteConnParamReqReplyCmd
@@ -3741,7 +3743,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[235]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_AdvertiseEnalbe
 </UL>
-<BR>[Called By]<UL><LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GAPRole_PeripheralInit
+<BR>[Called By]<UL><LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GAPRole_PeripheralInit
 </UL>
 
 <P><STRONG><a name="[263]"></a>LL_SlaveFeatureReq</STRONG> (Thumb, 58 bytes, Stack size 8 bytes, ll_pdu.o(i.LL_SlaveFeatureReq))
@@ -3847,7 +3849,7 @@ Global Symbols
 <P><STRONG><a name="[14e]"></a>RFEND_TXCtune</STRONG> (Thumb, 3132 bytes, Stack size 104 bytes, rfend.o(i.RFEND_TXCtune))
 <BR><BR>[Stack]<UL><LI>Max Depth = 132<LI>Call Chain = RFEND_TXCtune &rArr; __aeabi_idivmod &rArr; __aeabi_uidivmod
 </UL>
-<BR>[Calls]<UL><LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_idivmod
+<BR>[Calls]<UL><LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_idivmod
 </UL>
 <BR>[Called By]<UL><LI><a href="#[147]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLE_RegInit
 </UL>
@@ -3901,11 +3903,11 @@ Global Symbols
 <P><STRONG><a name="[188]"></a>SM_Init</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, sm.o(i.SM_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = SM_Init
 </UL>
-<BR>[Calls]<UL><LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;linkDB_Register
+<BR>[Calls]<UL><LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;linkDB_Register
 <LI><a href="#[1aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;L2CAP_RegisterApp
 <LI><a href="#[274]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SM_ParamInit
 </UL>
-<BR>[Called By]<UL><LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GAPRole_PeripheralInit
+<BR>[Called By]<UL><LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GAPRole_PeripheralInit
 </UL>
 
 <P><STRONG><a name="[1a3]"></a>SM_InitiatorInit</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, sm.o(i.SM_InitiatorInit))
@@ -4020,8 +4022,8 @@ Global Symbols
 <P><STRONG><a name="[9e]"></a>TMOS_ProcessEventRegister</STRONG> (Thumb, 34 bytes, Stack size 8 bytes, tmos.o(i.TMOS_ProcessEventRegister))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = TMOS_ProcessEventRegister
 </UL>
-<BR>[Called By]<UL><LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_Init
-<LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GAPRole_PeripheralInit
+<BR>[Called By]<UL><LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_Init
+<LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GAPRole_PeripheralInit
 <LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Peripheral_Init
 <LI><a href="#[235]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_AdvertiseEnalbe
 <LI><a href="#[182]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GAPRole_PeripheralEnable
@@ -4040,7 +4042,7 @@ Global Symbols
 <LI><a href="#[253]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ll_initiate_to_standby
 </UL>
 
-<P><STRONG><a name="[ba]"></a>TMOS_SystemProcess</STRONG> (Thumb, 152 bytes, Stack size 24 bytes, tmos.o(i.TMOS_SystemProcess))
+<P><STRONG><a name="[bb]"></a>TMOS_SystemProcess</STRONG> (Thumb, 152 bytes, Stack size 24 bytes, tmos.o(i.TMOS_SystemProcess))
 <BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = TMOS_SystemProcess &rArr; tmos_query_system_time &rArr; tmos_update_task_time &rArr; tmos_memory_free
 </UL>
 <BR>[Calls]<UL><LI><a href="#[282]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ble_timeout_process
@@ -4084,7 +4086,7 @@ Global Symbols
 <LI><a href="#[19]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_IRQHandler
 <LI><a href="#[33]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ProcessEvent
 <LI><a href="#[6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;simpleProfile_WriteAttrCB
-<LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CH57X_BLEInit
+<LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CH57X_BLEInit
 <LI><a href="#[2c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 <LI><a href="#[3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;simpleProfileChangeCB
 <LI><a href="#[0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;peripheralStateNotificationCB
@@ -4104,9 +4106,9 @@ Global Symbols
 <P><STRONG><a name="[b1]"></a>__ARM_common_switch8</STRONG> (Thumb, 26 bytes, Stack size 8 bytes, gapgattserver.o(i.__ARM_common_switch8))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = __ARM_common_switch8
 </UL>
-<BR>[Called By]<UL><LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOB_ModeCfg
-<LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetSysClock
-<LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DevInfo_GetParameter
+<BR>[Called By]<UL><LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetSysClock
+<LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DevInfo_GetParameter
+<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOB_ModeCfg
 <LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOA_ModeCfg
 <LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SimpleProfile_SetParameter
 <LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SimpleProfile_GetParameter
@@ -4134,7 +4136,7 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 280<LI>Call Chain = attSendMsg &rArr; SM_GenerateAuthenSig &rArr; sm_CMAC &rArr; generate_subkey &rArr; LL_Encrypt &rArr; AES128_ECB_encrypt &rArr; MixColumns
 </UL>
 <BR>[Calls]<UL><LI><a href="#[198]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tmos_memory_free
-<LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;linkDB_State
+<LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;linkDB_State
 <LI><a href="#[1e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;L2CAP_bm_alloc
 <LI><a href="#[135]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ATT_GetMTU
 <LI><a href="#[26e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SM_GenerateAuthenSig
@@ -4299,7 +4301,7 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLE_IRQHandler
 <LI><a href="#[26b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_GetCnt32K
 </UL>
-<BR>[Called By]<UL><LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TMOS_SystemProcess
+<BR>[Called By]<UL><LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TMOS_SystemProcess
 </UL>
 
 <P><STRONG><a name="[2ab]"></a>gapAddAddrAdj</STRONG> (Thumb, 56 bytes, Stack size 0 bytes, gap.o(i.gapAddAddrAdj))
@@ -4682,8 +4684,8 @@ Global Symbols
 <P><STRONG><a name="[50]"></a>gattServApp_HandleConnStatusCB</STRONG> (Thumb, 84 bytes, Stack size 24 bytes, gattservapp.o(i.gattServApp_HandleConnStatusCB))
 <BR><BR>[Stack]<UL><LI>Max Depth = 152<LI>Call Chain = gattServApp_HandleConnStatusCB &rArr; GATT_FindNextAttr &rArr; GATT_FindHandleUUID &rArr; ATT_CompareUUID &rArr; ATT_ConvertUUIDto128
 </UL>
-<BR>[Calls]<UL><LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;linkDB_State
-<LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GATTServApp_InitCharCfg
+<BR>[Calls]<UL><LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;linkDB_State
+<LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GATTServApp_InitCharCfg
 <LI><a href="#[2bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gattServApp_FindPrepareWriteQ
 <LI><a href="#[2bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gattServApp_ClearPrepareWriteQ
 <LI><a href="#[1ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GATT_FindNextAttr
@@ -4752,7 +4754,7 @@ Global Symbols
 <LI><a href="#[1d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GATT_FindHandleUUID
 <LI><a href="#[13f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ATT_ReadByGrpTypeRsp
 <LI><a href="#[135]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ATT_GetMTU
-<LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
+<LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
 </UL>
 <BR>[Called By]<UL><LI><a href="#[1c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gattServApp_ProcessMsg
 </UL>
@@ -4767,7 +4769,7 @@ Global Symbols
 <LI><a href="#[1d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GATT_FindHandleUUID
 <LI><a href="#[140]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ATT_ReadByTypeRsp
 <LI><a href="#[135]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ATT_GetMTU
-<LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
+<LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
 </UL>
 <BR>[Called By]<UL><LI><a href="#[1c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gattServApp_ProcessMsg
 </UL>
@@ -4800,7 +4802,7 @@ Global Symbols
 <P><STRONG><a name="[9]"></a>gattServApp_WriteAttrCB</STRONG> (Thumb, 42 bytes, Stack size 32 bytes, gattservapp.o(i.gattServApp_WriteAttrCB))
 <BR><BR>[Stack]<UL><LI>Max Depth = 72<LI>Call Chain = gattServApp_WriteAttrCB &rArr; GATTServApp_ProcessCCCWriteReq &rArr; GATTServApp_WriteCharCfg
 </UL>
-<BR>[Calls]<UL><LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GATTServApp_ProcessCCCWriteReq
+<BR>[Calls]<UL><LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GATTServApp_ProcessCCCWriteReq
 </UL>
 <BR>[Address Reference Count : 2]<UL><LI> gattservapp.o(i.GATTServApp_ParamInit)
 <LI> gattservapp.o(.data)
@@ -4808,7 +4810,7 @@ Global Symbols
 <P><STRONG><a name="[54]"></a>gattServerHandleConnStatusCB</STRONG> (Thumb, 124 bytes, Stack size 24 bytes, gattservapp.o(i.gattServerHandleConnStatusCB))
 <BR><BR>[Stack]<UL><LI>Max Depth = 96<LI>Call Chain = gattServerHandleConnStatusCB &rArr; gattNotifyEvent &rArr; tmos_msg_send &rArr; tmos_msg_deallocate &rArr; tmos_memory_free
 </UL>
-<BR>[Calls]<UL><LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;linkDB_State
+<BR>[Calls]<UL><LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;linkDB_State
 <LI><a href="#[2b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gattResetServerInfo
 <LI><a href="#[2b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gattFindServerInfo
 <LI><a href="#[1df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gattNotifyEvent
@@ -4862,7 +4864,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[167]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tmos_memory_allocate
 <LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tmos_memset
-<LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;linkDB_State
+<LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;linkDB_State
 </UL>
 <BR>[Called By]<UL><LI><a href="#[222]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;l2capSendReq
 <LI><a href="#[2db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;l2capProcessConnectReq
@@ -4982,7 +4984,7 @@ Global Symbols
 <P><STRONG><a name="[59]"></a>l2capHandleConnStatusCB</STRONG> (Thumb, 40 bytes, Stack size 8 bytes, l2cap.o(i.l2capHandleConnStatusCB))
 <BR><BR>[Stack]<UL><LI>Max Depth = 256<LI>Call Chain = l2capHandleConnStatusCB &rArr; l2capDisconnectAllChannels &rArr; L2CAP_DisconnectReq &rArr; l2capSendReq &rArr; l2capSendCmd &rArr; l2capEncapSendData &rArr; HCI_SendDataPkt &rArr; API_SendDataPkt &rArr; LL_SendDataPkt &rArr; tmos_memory_free
 </UL>
-<BR>[Calls]<UL><LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;linkDB_State
+<BR>[Calls]<UL><LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;linkDB_State
 <LI><a href="#[2cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;l2capDisconnectAllChannels
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> l2cap.o(i.L2CAP_Init)
@@ -5031,7 +5033,7 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 104<LI>Call Chain = l2capNotifyCreditEvt &rArr; l2capNotifySignal &rArr; tmos_msg_send &rArr; tmos_msg_deallocate &rArr; tmos_memory_free
 </UL>
 <BR>[Calls]<UL><LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tmos_memset
-<LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_idivmod
+<LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_idivmod
 <LI><a href="#[2d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;l2capNotifySignal
 </UL>
 <BR>[Called By]<UL><LI><a href="#[2f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;l2capSendNextSegment
@@ -5284,7 +5286,7 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 72<LI>Call Chain = l2capStartTimer &rArr; tmos_start_callback_task &rArr; tmos_start_task &rArr; tmos_memory_allocate
 </UL>
 <BR>[Calls]<UL><LI><a href="#[2c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tmos_start_callback_task
-<LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
+<LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
 </UL>
 <BR>[Called By]<UL><LI><a href="#[222]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;l2capSendReq
 <LI><a href="#[2db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;l2capProcessConnectReq
@@ -5325,7 +5327,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[170]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;linkDB_Find
 </UL>
-<BR>[Called By]<UL><LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GATT_Notification
+<BR>[Called By]<UL><LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GATT_Notification
 <LI><a href="#[1e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GATT_VerifyWritePermissions
 <LI><a href="#[1e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GATT_VerifyReadPermissions
 <LI><a href="#[1e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GATT_VerifyPrepareWritePermissions
@@ -5335,7 +5337,7 @@ Global Symbols
 <P><STRONG><a name="[170]"></a>linkDB_Find</STRONG> (Thumb, 44 bytes, Stack size 12 bytes, linkdb.o(i.linkDB_Find))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = linkDB_Find
 </UL>
-<BR>[Called By]<UL><LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;linkDB_State
+<BR>[Called By]<UL><LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;linkDB_State
 <LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GAPRole_TerminateLink
 <LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GAPRole_PeripheralConnParamUpdateReq
 <LI><a href="#[1d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;linkDB_Authen
@@ -5455,7 +5457,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[40]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GAPRole_PeripheralProcessEvent
 </UL>
 
-<P><STRONG><a name="[c0]"></a>linkDB_Register</STRONG> (Thumb, 32 bytes, Stack size 0 bytes, linkdb.o(i.linkDB_Register))
+<P><STRONG><a name="[c1]"></a>linkDB_Register</STRONG> (Thumb, 32 bytes, Stack size 0 bytes, linkdb.o(i.linkDB_Register))
 <BR><BR>[Called By]<UL><LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SimpleProfile_AddService
 <LI><a href="#[189]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GATTServApp_Init
 <LI><a href="#[1db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GATT_InitServer
@@ -5484,7 +5486,7 @@ Global Symbols
 <LI><a href="#[277]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;smProcessTMOSMsg
 </UL>
 
-<P><STRONG><a name="[be]"></a>linkDB_State</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, linkdb.o(i.linkDB_State))
+<P><STRONG><a name="[bf]"></a>linkDB_State</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, linkdb.o(i.linkDB_State))
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = linkDB_State &rArr; linkDB_Find
 </UL>
 <BR>[Calls]<UL><LI><a href="#[170]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;linkDB_Find
@@ -5541,7 +5543,7 @@ Global Symbols
 <LI><a href="#[309]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_1250US_TO_RTC_CLK
 <LI><a href="#[24f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_A_SUB_B
 <LI><a href="#[234]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_ReportGenerateEvent
-<LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
+<LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
 </UL>
 <BR>[Called By]<UL><LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ll_slave_process_event
 </UL>
@@ -5590,8 +5592,8 @@ Global Symbols
 <P><STRONG><a name="[2ff]"></a>ll_connect_init_pingOffset</STRONG> (Thumb, 42 bytes, Stack size 16 bytes, ll_connect.o(i.ll_connect_init_pingOffset))
 <BR><BR>[Stack]<UL><LI>Max Depth = 44<LI>Call Chain = ll_connect_init_pingOffset &rArr; __aeabi_idivmod &rArr; __aeabi_uidivmod
 </UL>
-<BR>[Calls]<UL><LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_idivmod
-<LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
+<BR>[Calls]<UL><LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_idivmod
+<LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
 </UL>
 <BR>[Called By]<UL><LI><a href="#[328]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ll_slave_process_after_tx
 <LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;llSlaveSetFirstTimer
@@ -5657,7 +5659,7 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 128<LI>Call Chain = ll_connect_update_get_offset &rArr; ble_ll_common_rand8 &rArr; __aeabi_lmul &rArr; __aeabi_llsl
 </UL>
 <BR>[Calls]<UL><LI><a href="#[25a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ble_ll_common_rand8
-<LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
+<LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
 </UL>
 <BR>[Called By]<UL><LI><a href="#[322]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ll_slave_check_connect_point
 <LI><a href="#[115]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_RemoteConnParamReqReply
@@ -5735,7 +5737,7 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[23c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ll_connect_update_get_offset
 <LI><a href="#[24f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_A_SUB_B
 <LI><a href="#[234]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_ReportGenerateEvent
-<LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
+<LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
 </UL>
 <BR>[Called By]<UL><LI><a href="#[328]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ll_slave_process_after_tx
 </UL>
@@ -6494,7 +6496,7 @@ Global Symbols
 <P><STRONG><a name="[d7]"></a>tmos_memcmp</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, tmos.o(i.tmos_memcmp))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = tmos_memcmp
 </UL>
-<BR>[Called By]<UL><LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CH57X_BLEInit
+<BR>[Called By]<UL><LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CH57X_BLEInit
 <LI><a href="#[12c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ATT_CompareUUID
 <LI><a href="#[2c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gattServApp_ProcessFindByTypeValueReq
 <LI><a href="#[1b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SM_ResolveRandomAddrs
@@ -6519,8 +6521,8 @@ Global Symbols
 <LI><a href="#[da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLE_LibInit
 <LI><a href="#[6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;simpleProfile_WriteAttrCB
 <LI><a href="#[5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;simpleProfile_ReadAttrCB
-<LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DevInfo_GetParameter
-<LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DevInfo_SetParameter
+<LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DevInfo_GetParameter
+<LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DevInfo_SetParameter
 <LI><a href="#[4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;devInfo_ReadAttrCB
 <LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SimpleProfile_SetParameter
 <LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SimpleProfile_GetParameter
@@ -6655,7 +6657,7 @@ Global Symbols
 </UL>
 <BR>[Called By]<UL><LI><a href="#[199]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tmos_memdup
 <LI><a href="#[149]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TMOS_Init
-<LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GATTServApp_RegisterService
+<LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GATTServApp_RegisterService
 <LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tmos_start_task
 <LI><a href="#[2be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gattServApp_IsWriteLong
 <LI><a href="#[1cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GATT_RegisterService
@@ -6769,7 +6771,7 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[27f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tmos_memory_init
 <LI><a href="#[149]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TMOS_Init
 <LI><a href="#[da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLE_LibInit
-<LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CH57X_BLEInit
+<LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CH57X_BLEInit
 <LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GGS_SetParameter
 <LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GAPRole_SetParameter
 <LI><a href="#[2be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gattServApp_IsWriteLong
@@ -7133,7 +7135,7 @@ Global Symbols
 <LI><a href="#[1b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tmos_start_reload_task
 <LI><a href="#[2c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tmos_start_callback_task
 <LI><a href="#[33]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ProcessEvent
-<LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_Init
+<LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_Init
 <LI><a href="#[2d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Peripheral_ProcessEvent
 <LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Peripheral_LinkEstablished
 <LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;llAdvertiseStart
@@ -7237,7 +7239,7 @@ Local Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[2d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Peripheral_ProcessEvent
 </UL>
 
-<P><STRONG><a name="[ac]"></a>Peripheral_LinkEstablished</STRONG> (Thumb, 208 bytes, Stack size 16 bytes, peripheral.o(.text))
+<P><STRONG><a name="[ac]"></a>Peripheral_LinkEstablished</STRONG> (Thumb, 204 bytes, Stack size 16 bytes, peripheral.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 136<LI>Call Chain = Peripheral_LinkEstablished &rArr; GAPRole_TerminateLink &rArr; GAP_TerminateLinkReq &rArr; disconnectNext &rArr; HCI_DisconnectCmd &rArr; API_DisconnectCmd &rArr; HCI_CommandStatusCback &rArr; HOST_CommandStatusEvent &rArr; tmos_msg_send &rArr; tmos_msg_deallocate &rArr; tmos_memory_free
 </UL>
 <BR>[Calls]<UL><LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tmos_start_task
@@ -7295,8 +7297,8 @@ Local Symbols
 <P><STRONG><a name="[2e]"></a>simpleProfile_HandleConnStatusCB</STRONG> (Thumb, 42 bytes, Stack size 16 bytes, gattprofile.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 36<LI>Call Chain = simpleProfile_HandleConnStatusCB &rArr; linkDB_State &rArr; linkDB_Find
 </UL>
-<BR>[Calls]<UL><LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;linkDB_State
-<LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GATTServApp_InitCharCfg
+<BR>[Calls]<UL><LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;linkDB_State
+<LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GATTServApp_InitCharCfg
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> gattprofile.o(.text)
 </UL>
@@ -7310,7 +7312,7 @@ Local Symbols
 <P><STRONG><a name="[6]"></a>simpleProfile_WriteAttrCB</STRONG> (Thumb, 296 bytes, Stack size 56 bytes, gattprofile.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 96<LI>Call Chain = simpleProfile_WriteAttrCB &rArr; GATTServApp_ProcessCCCWriteReq &rArr; GATTServApp_WriteCharCfg
 </UL>
-<BR>[Calls]<UL><LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GATTServApp_ProcessCCCWriteReq
+<BR>[Calls]<UL><LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GATTServApp_ProcessCCCWriteReq
 <LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tmos_memcpy
 <LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
@@ -7319,7 +7321,7 @@ Local Symbols
 <P><STRONG><a name="[d8]"></a>NVIC_SetPriority</STRONG> (Thumb, 110 bytes, Stack size 8 bytes, mcu.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = NVIC_SetPriority
 </UL>
-<BR>[Called By]<UL><LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CH57X_BLEInit
+<BR>[Called By]<UL><LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CH57X_BLEInit
 </UL>
 
 <P><STRONG><a name="[35a]"></a>RTC_OFFSET_A</STRONG> (Thumb, 30 bytes, Stack size 8 bytes, tmos.o(i.RTC_OFFSET_A))
@@ -7350,7 +7352,7 @@ Local Symbols
 <LI><a href="#[359]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_625US_TO_RTC_CLK
 <LI><a href="#[35a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_OFFSET_A
 </UL>
-<BR>[Called By]<UL><LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TMOS_SystemProcess
+<BR>[Called By]<UL><LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TMOS_SystemProcess
 </UL>
 
 <P><STRONG><a name="[358]"></a>tmos_update_task_time</STRONG> (Thumb, 122 bytes, Stack size 24 bytes, tmos.o(i.tmos_update_task_time))
@@ -7482,7 +7484,7 @@ Local Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[2b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gattFindServerInfo
 </UL>
-<BR>[Called By]<UL><LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GATT_Notification
+<BR>[Called By]<UL><LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GATT_Notification
 <LI><a href="#[1d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GATT_Indication
 </UL>
 
@@ -7508,7 +7510,7 @@ Local Symbols
 <LI><a href="#[1d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GATT_FindHandleUUID
 <LI><a href="#[134]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ATT_FindInfoRsp
 <LI><a href="#[1de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GATT_NotifyEvent
-<LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
+<LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> gattservapp.o(.constdata)
 </UL>
@@ -7560,8 +7562,8 @@ Local Symbols
 <BR>[Address Reference Count : 1]<UL><LI> gattservapp.o(.constdata)
 </UL>
 <P><STRONG><a name="[1c3]"></a>gattServApp_FindCharCfgItem</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, gattservapp.o(i.gattServApp_FindCharCfgItem))
-<BR><BR>[Called By]<UL><LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GATTServApp_ReadCharCfg
-<LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GATTServApp_InitCharCfg
+<BR><BR>[Called By]<UL><LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GATTServApp_ReadCharCfg
+<LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GATTServApp_InitCharCfg
 <LI><a href="#[1c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GATTServApp_WriteCharCfg
 </UL>
 
@@ -8345,7 +8347,7 @@ Local Symbols
 <LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tmos_start_task
 <LI><a href="#[191]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GAP_EndDiscoverable
 <LI><a href="#[1ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gapFreeAdvertState
-<LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_idivmod
+<LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_idivmod
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> gap_peripheral.o(i.GAP_PeripheralParamInit)
 </UL>
@@ -8371,7 +8373,7 @@ Local Symbols
 <LI><a href="#[1ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tmos_msg_allocate
 <LI><a href="#[29f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gapSendMakeDiscEvent
 <LI><a href="#[1ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gapFreeAdvertState
-<LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_idivmod
+<LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_idivmod
 </UL>
 <BR>[Called By]<UL><LI><a href="#[4b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gapPeriProcessHCICmdCompleteEvt
 </UL>
