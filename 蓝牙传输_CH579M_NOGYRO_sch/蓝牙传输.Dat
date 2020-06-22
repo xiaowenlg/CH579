@@ -1,0 +1,20 @@
+Field=Comment~String~Comment~100|Field=Description~String~Description~100|Field=Designator~String~Designator~100|Field=Footprint~String~Footprint~100|Field=LibRef~String~LibRef~100|Field=Quantity~Integer~Quantity~100|Field=Value~String~Value~100|ReportField=ProjectFileName~蓝牙传输.PrjPCB|ReportField=ProjectFullPath~E:\QF_Electronic Development Project\电路图\蓝牙传输_CH579M\蓝牙传输.PrjPCB|ReportField=Title~Bill of Materials For Project [蓝牙传输.PrjPCB] (No PCB Document Selected)|ReportField=TotalQuantity~24|ReportField=ReportTime~9:54:59|ReportField=ReportDate~2020/6/12|ReportField=ReportDateTime~2020/6/12 9:54:59|ReportField=OutputName~Bill of Materials|ReportField=OutputType~BOM_PartType|ReportField=GeneratorName~ReportComponents|ReportField=GeneratorDescription~Component Reports|ReportField=VariantName~None|ReportField=Address1~|ReportField=Address2~|ReportField=Address3~|ReportField=Address4~|ReportField=ApprovedBy~|ReportField=Author~Xiaowenlg|ReportField=CheckedBy~|ReportField=CompanyName~|ReportField=CurrentDate~2020/6/12|ReportField=CurrentTime~9:54:48|ReportField=Date~|ReportField=DocumentFullPathAndName~E:\QF_Electronic Development Project\电路图\蓝牙传输_CH579M\蓝牙传输.SchDoc|ReportField=DocumentName~蓝牙传输.SchDoc|ReportField=DocumentNumber~|ReportField=DrawnBy~Xiaowenlg|ReportField=Engineer~|ReportField=ImagePath~E:\QF_Electronic Development Project\电路图\Heart\logo.bmp|ReportField=ModifiedDate~2020/6/12|ReportField=Organization~|ReportField=Revision~V0.1|ReportField=Rule~|ReportField=SheetNumber~1|ReportField=SheetTotal~|ReportField=Time~|ReportField=Title~位置测量|ReportField=DataSourceFileName~蓝牙传输.PrjPCB|ReportField=DataSourceFullPath~E:\QF_Electronic Development Project\电路图\蓝牙传输_CH579M\蓝牙传输.PrjPCB
+Cap|无极性电容|C1, C4|C-RAD-0603|Cap|2|104
+Cap|无极性电容|C2, C6|C-RAD-0603|Cap|2|225
+Cap|无极性电容|C3, C5|C-RAD-0603|Cap|2|103
+Cap|无极性电容|C7|C-RAD-0805|Cap|1|2.2uF
+LED0|发光二极管|D1, D2|LED_0805|LED0|2|0805_Green
+SK34_C65008|快恢复二极管|D3|SMA_L4.3-W2.6-LS5.2-RD|SK34_C65008|1|SK34_SMA
+TVS|TVS二极管|D4|SMA_L4.3-W2.6-LS5.2-RD|SK34_C65008|1|SMAJ3.3A 3.3v
+ANTENNA|Generic Antenna|E1|ANT-F-1-2.4G-1.6|ANTENNA|1|PCB天线
+Header 4|Header, 4-Pin|P1|HDR1X4|Header 4|1|
+Header 2|接插件|P2|HDR2X1_A|Header 2|1|
+Battery|接插件|P3|XH2.54|Header 2|1|
+1K|贴片电阻|R1, R2|0805-1|Res1|2|1K
+54.9K|贴片电阻|R3|0805-1|Res1|1|54.9K
+110K|贴片电阻|R4|0805-1|Res1|1|110K
+10R|贴片电阻|R5|0805-1|Res1|1|10R
+CH579F|MCU+BLE|U1|QFN28_4X4|CH579F|1|
+ADXL345BCCZ-RL7|GYRO(加速度计)|U2|LGA-14_L5.0-W3.0-P0.80-BL|ADXL345BCCZ-RL7|1|ADXL345
+32M|Crystal Oscillator(晶振)|Y1|3225|XTAL|1|3255_32M
+32.768K|Crystal Oscillator(晶振)|Y2|fc-135|XTAL|1|FC_135_32.768K
