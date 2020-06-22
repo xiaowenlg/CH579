@@ -16,6 +16,7 @@
             "..\\MCUDriver\\SRC\\Startup",
             "..\\MCUDriver\\SRC\\StdPeriphDriver",
             "..\\MCUDriver\\HAL"
+
         ],
         "defines": [
             "__CC_ARM",

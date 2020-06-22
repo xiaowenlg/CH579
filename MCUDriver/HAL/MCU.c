@@ -11,10 +11,16 @@
 #include "CH57x_common.h"
 #include "HAL.h"
 #include "config.h"
-
+#include "DataProcessing.h"
+#include "BspConfig.h"
 tmosTaskID halTaskID;
 uint8 flag = 0, Led_Num = 0;
 extern int8 rssi_t;
+uint16 Number_Records = 0;
+uint16 Count_now = 0;
+SportData_t *sd_t = NULL;
+uint16_t SportTim = 0;
+uint8 Freq = 0;
 /*******************************************************************************
  * @fn          CH57X_BLEInit
  *
@@ -95,19 +101,7 @@ void CH57X_BLEInit(void)
       ;
   }
 }
-void GotoCutPower()
-{
-  //睡眠
-  PRINT("shut down by rssi_t \n");
-  GPIOA_ModeCfg(GPIO_Pin_All, GPIO_ModeIN_PU);
-  GPIOB_ModeCfg(GPIO_Pin_All, GPIO_ModeIN_PU);
-  DelayMs(1);
-  LowPower_Shutdown(NULL); //全部断电，唤醒后复位
-  /* 此模式唤醒后会执行复位，所以下面代码不会运行 */
-  SetSysClock(CLK_SOURCE_HSE_32MHz); // 切换到原始时钟
-  PRINT("wake.. \n");
-  DelayMs(500);
-}
+
 /*******************************************************************************
  * @fn          HAL_ProcessEvent
  *
@@ -127,7 +121,7 @@ void GotoCutPower()
 tmosEvents HAL_ProcessEvent(tmosTaskID task_id, tmosEvents events)
 {
   uint8 *msgPtr;
-  uint8 Freq = 0;
+
   if (events & SYS_EVENT_MSG)
   { // 处理HAL层消息，调用tmos_msg_receive读取消息，处理完成后删除消息。
     msgPtr = tmos_msg_receive(task_id);
@@ -157,7 +151,8 @@ tmosEvents HAL_ProcessEvent(tmosTaskID task_id, tmosEvents events)
   }
   if (events & HAL_TEST_EVENT)
   {
-    static uint8 tim = 0;
+    static uint8 tim = 0, freq_tim = 0;
+#if (EVENT_RUNNING)
     flag = ~flag;
     if (flag)
       GPIOA_SetBits(GPIO_Pin_15);
@@ -166,25 +161,39 @@ tmosEvents HAL_ProcessEvent(tmosTaskID task_id, tmosEvents events)
     PRINT("Led_Num=%d   riss_t=%d\n", Led_Num++, rssi_t);
     if (Led_Num > 50)
       Led_Num = 0;
-    Freq = Count_now;
-    Count_now = 0;
+#endif
+    if (freq_tim++ > MEASURE_SPEED)
+    {
+      freq_tim = 0;
+      Freq = Count_now; //get sport freq
+      Count_now = 0;
+      Freq = Freq / MEASURE_SPEED;
+    }
+
     if (Freq == 0)
     {
       /* code */
       if (tim++ > 20)
       {
-        //GotoCutPower();
+        //GotoCutPower();         //close power change into low power
       }
     }
     else
-    {
       tim = 0;
-    }
-
     if (rssi_t < -90)
     {
-      // GotoCutPower();
+      // GotoCutPower();           //close power change into low power
     }
+    if (Freq != 0) //get sport time
+    {
+      SportTim++;
+    }
+
+    sd_t->count = Number_Records; //次数
+    sd_t->freq = Freq;            //速度
+    sd_t->tim = SportTim;         //时间
+    sd_t->cal = ConsumeHeat(WEIGHT, SportTim, Freq);
+
     tmos_start_task(halTaskID, HAL_TEST_EVENT, MS1_TO_SYSTEM_TIME(1000));
     return events ^ HAL_TEST_EVENT;
   }
@@ -278,5 +287,20 @@ uint16 HAL_GetInterTempValue(void)
   R8_ADC_CFG = config;
   return (adc_data);
 }
+//外部中断
+void GPIO_IRQHandler(void)
+{
+  if (GPIOA_ReadITFlagBit(GPIO_Pin_5))
+  {
+    DelayMs(10);
+    if (GPIOA_ReadPortPin(GPIO_Pin_5) == 0)
+      Number_Records++; //次数累加
+    Count_now++;
+    PRINT("Number=%d\n", Number_Records);
+  }
+
+  GPIOA_ClearITFlagBit(GPIO_Pin_6 | GPIO_Pin_5);
+}
+//get the sport data
 
 /******************************** endfile @ mcu ******************************/

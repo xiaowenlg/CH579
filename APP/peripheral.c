@@ -60,7 +60,6 @@
 
 u8 DeviceID[20] = "00010000100026000005"; //Éè±¸ºÅID 00010000100026000005
 uint16 m = 0;
-uint16 Number_Records = 0;
 int8 rssi_t = 0;
 /*********************************************************************
  * TYPEDEFS
@@ -629,10 +628,10 @@ static void performPeriodicTask(void)
   }
   notiData[3] = (m * 60) >> 8;
   notiData[4] = (m * 60) & 0x00ff;
-  notiData[5] = Number_Records >> 8;
-  notiData[6] = Number_Records & 0x00ff;
-  notiData[7] = Number_Records * 2 >> 8;
-  notiData[8] = Number_Records * 2 & 0x00ff;
+  notiData[5] = sd_t->count >> 8;
+  notiData[6] = sd_t->count & 0x00ff;
+  notiData[7] = sd_t->cal >> 8;
+  notiData[8] = sd_t->cal & 0x00ff;
   peripheralChar4Notify(notiData, SIMPLEPROFILE_CHAR4_LEN);
   //4
   notiData[2] = 4;
@@ -640,8 +639,8 @@ static void performPeriodicTask(void)
   {
     notiData[i] = 0;
   }
-  notiData[7] = Number_Records >> 8;
-  notiData[8] = Number_Records & 0x00ff;
+  notiData[7] = sd_t->count >> 8;
+  notiData[8] = sd_t->count & 0x00ff;
   peripheralChar4Notify(notiData, SIMPLEPROFILE_CHAR4_LEN);
   //5
   notiData[2] = 5;

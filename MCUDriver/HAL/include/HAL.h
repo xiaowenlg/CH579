@@ -1,3 +1,11 @@
+/*
+ * @Author: your name
+ * @Date: 2020-06-19 17:52:23
+ * @LastEditTime: 2020-06-20 11:21:58
+ * @LastEditors: your name
+ * @Description: In User Settings Edit
+ * @FilePath: \CH579\MCUDriver\HAL\include\HAL.h
+ */
 /********************************** (C) COPYRIGHT *******************************
 * File Name          : HAL.h
 * Author             : WCH
@@ -23,7 +31,7 @@ extern "C"
 /* hal task Event */
 #define LED_BLINK_EVENT 0x0001
 #define HAL_KEY_EVENT 0x0002
-#define HAL_TEST_EVENT 0x4000
+#define HAL_TEST_EVENT 0x4000 //??????
 
 // hal sys_message
 #define MESSAGE_UART 0xA0                // UART message
