@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\obj\BLE.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\obj\BLE.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Wed Jun 24 06:45:39 2020
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Wed Jun 24 06:54:52 2020
 <BR><P>
 <H3>Maximum Stack Usage =        552 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -407,7 +407,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ARM_common_switch8
 </UL>
-<BR>[Called By]<UL><LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GotoCutPower
+<BR>[Called By]<UL><LI><a href="#[ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GotoCutPower
 <LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Sleep_Init
 </UL>
 
@@ -433,7 +433,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
 </UL>
-<BR>[Called By]<UL><LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TimeInit
+<BR>[Called By]<UL><LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TimeInit
 </UL>
 
 <P><STRONG><a name="[ce]"></a>RTC_GetTime</STRONG> (Thumb, 118 bytes, Stack size 40 bytes, ch57x_clk.o(.text), UNUSED)
@@ -463,7 +463,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ARM_common_switch8
 </UL>
-<BR>[Called By]<UL><LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GotoCutPower
+<BR>[Called By]<UL><LI><a href="#[ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GotoCutPower
 <LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Weak_Source_Init
 <LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Sleep_Init
 <LI><a href="#[2c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
@@ -474,7 +474,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ARM_common_switch8
 </UL>
-<BR>[Called By]<UL><LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GotoCutPower
+<BR>[Called By]<UL><LI><a href="#[ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GotoCutPower
 <LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Sleep_Init
 <LI><a href="#[2c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
@@ -530,12 +530,10 @@ Global Symbols
 <BR><BR>[Calls]<UL><LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PowerMonitor
 </UL>
 
-<P><STRONG><a name="[d5]"></a>LowPower_Shutdown</STRONG> (Thumb, 144 bytes, Stack size 16 bytes, ch57x_pwr.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = LowPower_Shutdown &rArr; PowerMonitor &rArr; mDelayuS
+<P><STRONG><a name="[d5]"></a>LowPower_Shutdown</STRONG> (Thumb, 144 bytes, Stack size 16 bytes, ch57x_pwr.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PowerMonitor
 </UL>
-<BR>[Calls]<UL><LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PowerMonitor
-</UL>
-<BR>[Called By]<UL><LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GotoCutPower
+<BR>[Called By]<UL><LI><a href="#[ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GotoCutPower
 </UL>
 
 <P><STRONG><a name="[376]"></a>EnterCodeUpgrade</STRONG> (Thumb, 154 bytes, Stack size 0 bytes, ch57x_pwr.o(.text), UNUSED)
@@ -566,12 +564,10 @@ Global Symbols
 <LI><a href="#[2f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemInit
 </UL>
 
-<P><STRONG><a name="[d6]"></a>mDelaymS</STRONG> (Thumb, 26 bytes, Stack size 12 bytes, ch57x_sys.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = mDelaymS &rArr; mDelayuS
+<P><STRONG><a name="[d6]"></a>mDelaymS</STRONG> (Thumb, 26 bytes, Stack size 12 bytes, ch57x_sys.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mDelayuS
 </UL>
-<BR>[Calls]<UL><LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mDelayuS
-</UL>
-<BR>[Called By]<UL><LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GotoCutPower
+<BR>[Called By]<UL><LI><a href="#[ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GotoCutPower
 </UL>
 
 <P><STRONG><a name="[63]"></a>fputc</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, ch57x_sys.o(.text))
@@ -657,12 +653,11 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[2c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[34]"></a>HAL_ProcessEvent</STRONG> (Thumb, 332 bytes, Stack size 24 bytes, mcu.o(.text))
+<P><STRONG><a name="[34]"></a>HAL_ProcessEvent</STRONG> (Thumb, 320 bytes, Stack size 24 bytes, mcu.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = HAL_ProcessEvent &rArr; ConsumeHeat &rArr; __aeabi_fmul
 </UL>
-<BR>[Calls]<UL><LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ui2f
-<LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GotoCutPower
-<LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ConsumeHeat
+<BR>[Calls]<UL><LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ui2f
+<LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ConsumeHeat
 <LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_KeyPoll
 <LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tmos_start_task
 <LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tmos_msg_receive
@@ -673,7 +668,7 @@ Global Symbols
 <P><STRONG><a name="[ba]"></a>HAL_Init</STRONG> (Thumb, 46 bytes, Stack size 8 bytes, mcu.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 76<LI>Call Chain = HAL_Init &rArr; HAL_TimeInit &rArr; RTC_InitTime &rArr; __aeabi_uidivmod
 </UL>
-<BR>[Calls]<UL><LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TimeInit
+<BR>[Calls]<UL><LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TimeInit
 <LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_KeyInit
 <LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tmos_start_task
 <LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TMOS_ProcessEventRegister
@@ -684,7 +679,7 @@ Global Symbols
 <P><STRONG><a name="[1d]"></a>LLE_IRQHandler</STRONG> (Thumb, 8 bytes, Stack size 8 bytes, mcu.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 28<LI>Call Chain = LLE_IRQHandler &rArr; BLE_IRQHandler
 </UL>
-<BR>[Calls]<UL><LI><a href="#[e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLE_IRQHandler
+<BR>[Calls]<UL><LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLE_IRQHandler
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_armcm0.o(RESET)
 </UL>
@@ -704,36 +699,32 @@ Global Symbols
 <P><STRONG><a name="[24]"></a>RTC_IRQHandler</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, rtc.o(.text))
 <BR>[Address Reference Count : 1]<UL><LI> startup_armcm0.o(RESET)
 </UL>
-<P><STRONG><a name="[e5]"></a>HAL_TimeInit</STRONG> (Thumb, 52 bytes, Stack size 8 bytes, rtc.o(.text))
+<P><STRONG><a name="[e4]"></a>HAL_TimeInit</STRONG> (Thumb, 52 bytes, Stack size 8 bytes, rtc.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 68<LI>Call Chain = HAL_TimeInit &rArr; RTC_InitTime &rArr; __aeabi_uidivmod
 </UL>
-<BR>[Calls]<UL><LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TMOS_TimerInit
+<BR>[Calls]<UL><LI><a href="#[e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TMOS_TimerInit
 <LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_InitTime
 </UL>
 <BR>[Called By]<UL><LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_Init
 </UL>
 
-<P><STRONG><a name="[e4]"></a>ConsumeHeat</STRONG> (Thumb, 62 bytes, Stack size 40 bytes, dataprocessing.o(.text))
+<P><STRONG><a name="[e3]"></a>ConsumeHeat</STRONG> (Thumb, 62 bytes, Stack size 40 bytes, dataprocessing.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = ConsumeHeat &rArr; __aeabi_fmul
 </UL>
-<BR>[Calls]<UL><LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fmul
-<LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fdiv
-<LI><a href="#[ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_f2uiz
+<BR>[Calls]<UL><LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fmul
+<LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fdiv
+<LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_f2uiz
 </UL>
 <BR>[Called By]<UL><LI><a href="#[34]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ProcessEvent
 </UL>
 
-<P><STRONG><a name="[e2]"></a>GotoCutPower</STRONG> (Thumb, 58 bytes, Stack size 8 bytes, dataprocessing.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = GotoCutPower &rArr; LowPower_Shutdown &rArr; PowerMonitor &rArr; mDelayuS
-</UL>
-<BR>[Calls]<UL><LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mDelaymS
+<P><STRONG><a name="[ea]"></a>GotoCutPower</STRONG> (Thumb, 58 bytes, Stack size 8 bytes, dataprocessing.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mDelaymS
 <LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LowPower_Shutdown
 <LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetSysClock
 <LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOB_ModeCfg
 <LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOA_ModeCfg
 <LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
-</UL>
-<BR>[Called By]<UL><LI><a href="#[34]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ProcessEvent
 </UL>
 
 <P><STRONG><a name="[b4]"></a>Sleep_Init</STRONG> (Thumb, 26 bytes, Stack size 8 bytes, dataprocessing.o(.text))
@@ -848,21 +839,21 @@ Global Symbols
 <BR><BR>[Calls]<UL><LI><a href="#[f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memset
 </UL>
 
-<P><STRONG><a name="[e8]"></a>__aeabi_fmul</STRONG> (Thumb, 122 bytes, Stack size 16 bytes, fmul.o(.text))
+<P><STRONG><a name="[e7]"></a>__aeabi_fmul</STRONG> (Thumb, 122 bytes, Stack size 16 bytes, fmul.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = __aeabi_fmul
 </UL>
-<BR>[Called By]<UL><LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ConsumeHeat
+<BR>[Called By]<UL><LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ConsumeHeat
 </UL>
 
-<P><STRONG><a name="[e9]"></a>__aeabi_fdiv</STRONG> (Thumb, 124 bytes, Stack size 16 bytes, fdiv.o(.text))
+<P><STRONG><a name="[e8]"></a>__aeabi_fdiv</STRONG> (Thumb, 124 bytes, Stack size 16 bytes, fdiv.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = __aeabi_fdiv
 </UL>
 <BR>[Calls]<UL><LI><a href="#[f2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_float_round
 </UL>
-<BR>[Called By]<UL><LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ConsumeHeat
+<BR>[Called By]<UL><LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ConsumeHeat
 </UL>
 
-<P><STRONG><a name="[e3]"></a>__aeabi_ui2f</STRONG> (Thumb, 14 bytes, Stack size 8 bytes, ffltui.o(.text))
+<P><STRONG><a name="[e2]"></a>__aeabi_ui2f</STRONG> (Thumb, 14 bytes, Stack size 8 bytes, ffltui.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = __aeabi_ui2f &rArr; _float_epilogue
 </UL>
 <BR>[Calls]<UL><LI><a href="#[f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_float_epilogue
@@ -870,8 +861,8 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[34]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ProcessEvent
 </UL>
 
-<P><STRONG><a name="[ea]"></a>__aeabi_f2uiz</STRONG> (Thumb, 40 bytes, Stack size 0 bytes, ffixui.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ConsumeHeat
+<P><STRONG><a name="[e9]"></a>__aeabi_f2uiz</STRONG> (Thumb, 40 bytes, Stack size 0 bytes, ffixui.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ConsumeHeat
 </UL>
 
 <P><STRONG><a name="[f4]"></a>__aeabi_uldivmod</STRONG> (Thumb, 96 bytes, Stack size 48 bytes, uldiv.o(.text), UNUSED)
@@ -884,13 +875,13 @@ Global Symbols
 <P><STRONG><a name="[38f]"></a>__I$use$fp</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, iusefp.o(.text), UNUSED)
 
 <P><STRONG><a name="[f2]"></a>_float_round</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, fepilogue.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fdiv
+<BR><BR>[Called By]<UL><LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fdiv
 </UL>
 
 <P><STRONG><a name="[f3]"></a>_float_epilogue</STRONG> (Thumb, 114 bytes, Stack size 12 bytes, fepilogue.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = _float_epilogue
 </UL>
-<BR>[Called By]<UL><LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ui2f
+<BR>[Called By]<UL><LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ui2f
 </UL>
 
 <P><STRONG><a name="[8f]"></a>__scatterload</STRONG> (Thumb, 28 bytes, Stack size 0 bytes, init.o(.text))
@@ -1455,7 +1446,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[23b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_Init
 </UL>
 
-<P><STRONG><a name="[e6]"></a>BLE_IRQHandler</STRONG> (Thumb, 172 bytes, Stack size 20 bytes, lle.o(i.BLE_IRQHandler))
+<P><STRONG><a name="[e5]"></a>BLE_IRQHandler</STRONG> (Thumb, 172 bytes, Stack size 20 bytes, lle.o(i.BLE_IRQHandler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = BLE_IRQHandler
 </UL>
 <BR>[Called By]<UL><LI><a href="#[1d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LLE_IRQHandler
@@ -4093,24 +4084,24 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = TMOS_SystemProcess &rArr; tmos_query_system_time &rArr; tmos_update_task_time &rArr; tmos_memory_free
 </UL>
 <BR>[Calls]<UL><LI><a href="#[288]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tmos_query_system_time
-<LI><a href="#[e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLE_IRQHandler
+<LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLE_IRQHandler
 <LI><a href="#[287]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ble_timeout_process
 </UL>
 <BR>[Called By]<UL><LI><a href="#[2c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[e7]"></a>TMOS_TimerInit</STRONG> (Thumb, 36 bytes, Stack size 8 bytes, tmos_hw.o(i.TMOS_TimerInit))
+<P><STRONG><a name="[e6]"></a>TMOS_TimerInit</STRONG> (Thumb, 36 bytes, Stack size 8 bytes, tmos_hw.o(i.TMOS_TimerInit))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = TMOS_TimerInit &rArr; TMOS_TimerRegister
 </UL>
 <BR>[Calls]<UL><LI><a href="#[289]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TMOS_TimerRegister
 </UL>
-<BR>[Called By]<UL><LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TimeInit
+<BR>[Called By]<UL><LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TimeInit
 </UL>
 
 <P><STRONG><a name="[289]"></a>TMOS_TimerRegister</STRONG> (Thumb, 14 bytes, Stack size 8 bytes, tmos.o(i.TMOS_TimerRegister))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = TMOS_TimerRegister
 </UL>
-<BR>[Called By]<UL><LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TMOS_TimerInit
+<BR>[Called By]<UL><LI><a href="#[e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TMOS_TimerInit
 </UL>
 
 <P><STRONG><a name="[362]"></a>WtireFlash</STRONG> (Thumb, 82 bytes, Stack size 20 bytes, tmos_hw.o(i.WtireFlash))
@@ -4129,7 +4120,7 @@ Global Symbols
 <P><STRONG><a name="[af]"></a>__2printf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printf5.o(i.__0printf$5))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = __2printf
 </UL>
-<BR>[Called By]<UL><LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GotoCutPower
+<BR>[Called By]<UL><LI><a href="#[ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GotoCutPower
 <LI><a href="#[31]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HalKeyCallback
 <LI><a href="#[6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;simpleProfile_WriteAttrCB
 <LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CH57X_BLEInit
@@ -4279,7 +4270,7 @@ Global Symbols
 <P><STRONG><a name="[23c]"></a>ble_ll_hw_api_shut</STRONG> (Thumb, 70 bytes, Stack size 8 bytes, ip.o(i.ble_ll_hw_api_shut))
 <BR><BR>[Stack]<UL><LI>Max Depth = 28<LI>Call Chain = ble_ll_hw_api_shut &rArr; BLE_IRQHandler
 </UL>
-<BR>[Calls]<UL><LI><a href="#[e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLE_IRQHandler
+<BR>[Calls]<UL><LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLE_IRQHandler
 <LI><a href="#[290]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ble_get_phy_states
 </UL>
 <BR>[Called By]<UL><LI><a href="#[315]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ll_hw_api_rx_set_txlen
@@ -4344,7 +4335,7 @@ Global Symbols
 <P><STRONG><a name="[287]"></a>ble_timeout_process</STRONG> (Thumb, 50 bytes, Stack size 8 bytes, tmos_hw.o(i.ble_timeout_process))
 <BR><BR>[Stack]<UL><LI>Max Depth = 28<LI>Call Chain = ble_timeout_process &rArr; BLE_IRQHandler
 </UL>
-<BR>[Calls]<UL><LI><a href="#[e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLE_IRQHandler
+<BR>[Calls]<UL><LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLE_IRQHandler
 <LI><a href="#[270]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_GetCnt32K
 </UL>
 <BR>[Called By]<UL><LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TMOS_SystemProcess
