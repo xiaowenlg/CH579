@@ -51,7 +51,7 @@ extern "C"
 
   /* 1 - KEY */
 //#define KEY1_BV BV(22) //引脚定义
-#define KEY1_BV GPIO_Pin_12 //引脚定义
+#define KEY1_BV GPIO_Pin_12 //引脚定义yyyyyyyyyyyyy
 #define KEY2_BV
 #define KEY3_BV
 #define KEY4_BV
