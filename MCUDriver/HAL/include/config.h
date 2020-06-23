@@ -65,7 +65,7 @@
 #define WAKE_UP_RTC_MAX_TIME				80
 #endif
 #ifndef HAL_KEY
-#define HAL_KEY											FALSE
+#define HAL_KEY											TRUE
 #endif
 #ifndef HAL_LED
 #define HAL_LED											FALSE	

@@ -50,22 +50,26 @@ extern "C"
                             /* 按键定义 */
 
   /* 1 - KEY */
-#define KEY1_BV BV(22) //引脚定义
+//#define KEY1_BV BV(22) //引脚定义
+#define KEY1_BV GPIO_Pin_12
 #define KEY2_BV
 #define KEY3_BV
 #define KEY4_BV
 
-#define KEY1_PU (R32_PB_PU |= KEY1_BV) //上拉电阻使能
+//#define KEY1_PU (R32_PB_PU |= KEY1_BV) //上拉电阻使能
+#define KEY1_PU (R32_PA_PU |= KEY1_BV) //上拉电阻使能
 #define KEY2_PU ()
 #define KEY3_PU ()
 #define KEY4_PU ()
 
-#define KEY1_DIR (R32_PB_DIR &= ~KEY1_BV) //设置成输入模式
+//#define KEY1_DIR (R32_PB_DIR &= ~KEY1_BV) //设置成输入模式
+#define KEY1_DIR (R32_PA_DIR &= ~KEY1_BV) //设置成输入模式
 #define KEY2_PU ()
 #define KEY3_PU ()
 #define KEY4_PU ()
 
-#define KEY1_IN (ACTIVE_LOW(R32_PB_PIN & KEY1_BV)) //没有按键按下时1111(由于上拉了)，如第第一个按下，1110 然后&上第一个按键的键码0001 结果变成0000 后再取反变成1111
+//#define KEY1_IN (ACTIVE_LOW(R32_PB_PIN & KEY1_BV)) //没有按键按下时1111(由于上拉了)，如第第一个按下，1110 然后&上第一个按键的键码0001 结果变成0000 后再取反变成1111
+#define KEY1_IN (ACTIVE_LOW(R32_PA_PIN & KEY1_BV))
 #define KEY2_IN ()
 #define KEY3_IN ()
 #define KEY4_IN ()
@@ -119,12 +123,14 @@ extern "C"
   /*
  * Read the Key callback
  */
-  void HalKeyCallback(uint8 keys, uint8 state);
+  extern void HalKeyCallback(uint8 keys, uint8 state);
 
   /*
  * Read the Key status
  */
   uint8 HalKeyRead(void);
+
+  uint8 OnBoard_SendKeys(uint8 keys, uint8 state);
 
   /**************************************************************************************************
 **************************************************************************************************/

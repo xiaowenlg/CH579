@@ -50,7 +50,8 @@
             "__breakpoint(x)=",
             "__ror=",
             "__clz=",
-            "DEBUG"
+            "DEBUG",
+            "HAL_KEY"
         ],
         "intelliSenseMode": "${default}"
     }],

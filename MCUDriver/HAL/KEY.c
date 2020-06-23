@@ -120,40 +120,6 @@ uint8 OnBoard_SendKeys(uint8 keys, uint8 state)
   }
 }
 
-/*********************************************************************
- * @fn      OnBoard_KeyCallback
- *
- * @brief   Callback service for keys
- *
- * @param   keys  - keys that were pressed
- *          state - shifted
- *
- * @return  void
- *********************************************************************/
-void HalKeyCallback(uint8 keys, uint8 state)
-{
-  (void)state;
-  if (OnBoard_SendKeys(keys, state) != SUCCESS)
-  {
-    // Process SW1 here
-    if (keys & HAL_KEY_SW_1)
-    { // Switch 1
-    }
-    // Process SW2 here
-    if (keys & HAL_KEY_SW_2)
-    { // Switch 2
-    }
-    // Process SW3 here
-    if (keys & HAL_KEY_SW_3)
-    { // Switch 3
-    }
-    // Process SW4 here
-    if (keys & HAL_KEY_SW_4)
-    { // Switch 4
-    }
-  }
-}
-
 /**************************************************************************************************
  * @fn      HalKeyRead
  *

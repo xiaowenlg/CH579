@@ -13,6 +13,8 @@
 #include "config.h"
 #include "DataProcessing.h"
 #include "BspConfig.h"
+#include "KEY.h"
+
 tmosTaskID halTaskID;
 uint8 flag = 0, Led_Num = 0;
 extern int8 rssi_t;
@@ -155,10 +157,10 @@ tmosEvents HAL_ProcessEvent(tmosTaskID task_id, tmosEvents events)
 #if (EVENT_RUNNING)
     flag = ~flag;
     if (flag)
-      GPIOA_SetBits(GPIO_Pin_15);
+      GPIOB_SetBits(PB15_LED);
     else
-      GPIOA_ResetBits(GPIO_Pin_15);
-    PRINT("Led_Num=%d   riss_t=%d\n", Led_Num++, rssi_t);
+      GPIOB_ResetBits(PB15_LED);
+    // PRINT("Led_Num=%d   riss_t=%d\n", Led_Num++, rssi_t);
     if (Led_Num > 50)
       Led_Num = 0;
 #endif
@@ -187,13 +189,8 @@ tmosEvents HAL_ProcessEvent(tmosTaskID task_id, tmosEvents events)
     if (Freq != 0) //get sport time
     {
       SportTim++;
+      sd_t.cal += ConsumeHeat(WEIGHT, 1 / 60.00, (float)Freq); //消耗热量累加
     }
-
-    sd_t.count = Number_Records; //次数
-    sd_t.freq = Freq;            //速度
-    sd_t.tim = SportTim;         //时间
-    sd_t.cal = ConsumeHeat(WEIGHT, SportTim / 60.00, (float)Freq);
-
     tmos_start_task(halTaskID, HAL_TEST_EVENT, MS1_TO_SYSTEM_TIME(1000));
     return events ^ HAL_TEST_EVENT;
   }
@@ -226,7 +223,7 @@ void HAL_Init() //应用层初始化
   HAL_LedInit();
 #endif
 #if (defined HAL_KEY) && (HAL_KEY == TRUE)
-  HAL_KeyInit();
+  HAL_KeyInit(); //按键初始化
 #endif
   __enable_irq();
   tmos_start_task(halTaskID, HAL_TEST_EVENT, 1000); // 添加一个测试任务
@@ -288,18 +285,50 @@ uint16 HAL_GetInterTempValue(void)
   R8_ADC_CFG = config;
   return (adc_data);
 }
+
+/*********************************************************************
+ * @fn      OnBoard_KeyCallback
+ *
+ * @brief   Callback service for keys
+ *
+ * @param   keys  - keys that were pressed
+ *          state - shifted
+ *
+ * @return  void
+ *********************************************************************/
+void HalKeyCallback(uint8 keys, uint8 state)
+{
+  (void)state;
+  if (OnBoard_SendKeys(keys, state) != SUCCESS)
+  {
+    // Process SW1 here
+    if (keys & HAL_KEY_SW_1) //检测次数
+    {                        // Switch 1
+      PRINT("KEY1 Pressed!");
+      //Number_Records++; //次数累加
+      Count_now++;
+      sd_t.count++;        //次数累加
+      sd_t.freq = Freq;    //速度
+      sd_t.tim = SportTim; //时间
+      PRINT("Sport info SportTim=%d,Number=%d,Freq=%d,cal=%d\n", sd_t.tim, sd_t.count, sd_t.freq, sd_t.cal);
+    }
+    // Process SW2 here
+    if (keys & HAL_KEY_SW_2)
+    { // Switch 2
+    }
+    // Process SW3 here
+    if (keys & HAL_KEY_SW_3)
+    { // Switch 3
+    }
+    // Process SW4 here
+    if (keys & HAL_KEY_SW_4)
+    { // Switch 4
+    }
+  }
+}
 //外部中断
 void GPIO_IRQHandler(void)
 {
-  if (GPIOA_ReadITFlagBit(SENSOR))
-  {
-    DelayMs(10);
-    if (GPIOA_ReadPortPin(SENSOR) == 0)
-      Number_Records++; //次数累加
-    Count_now++;
-    PRINT("Number=%d\n", Number_Records);
-  }
-
   GPIOA_ClearITFlagBit(SENSOR);
 }
 //get the sport data

@@ -11,6 +11,7 @@
 ".\obj\ch57x_pwr.o"
 ".\obj\ch57x_sys.o"
 ".\obj\ch57x_uart1.o"
+".\obj\key.o"
 ".\obj\mcu.o"
 ".\obj\rtc.o"
 ".\obj\sleep.o"

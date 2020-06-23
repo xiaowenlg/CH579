@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-06-20 10:58:44
- * @LastEditTime: 2020-06-22 20:01:55
+ * @LastEditTime: 2020-06-23 20:23:43
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \CH579\MCUDriver\HAL\DataProcessing.c
@@ -14,7 +14,7 @@
  */
 uint16_t ConsumeHeat(float weight, float tim, float v)
 {
-    return (uint16_t)(3 * weight * tim * v) / 40;
+    return (uint16_t)((3 * weight * tim * v * 10) / 40);
 }
 
 //Turn off the Power
