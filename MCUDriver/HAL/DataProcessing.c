@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-06-20 10:58:44
- * @LastEditTime: 2020-06-23 20:23:43
+ * @LastEditTime: 2020-06-24 06:45:22
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \CH579\MCUDriver\HAL\DataProcessing.c
@@ -18,7 +18,7 @@ uint16_t ConsumeHeat(float weight, float tim, float v)
 }
 
 //Turn off the Power
-void GotoCutPower()
+void GotoCutPower(void)
 {
 //睡眠
 #if (SLEEP_DEBUG)

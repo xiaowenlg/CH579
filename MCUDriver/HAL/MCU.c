@@ -177,7 +177,7 @@ tmosEvents HAL_ProcessEvent(tmosTaskID task_id, tmosEvents events)
       /* code */
       if (tim++ > 20)
       {
-        //GotoCutPower();         //close power change into low power
+        //GotoCutPower(); //close power change into low power
       }
     }
     else
