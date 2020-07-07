@@ -58,8 +58,6 @@
 #define INFO_FIRST 0xaa
 #define INFO_SEC 0x55
 
-u8 DeviceID[20] = "00010000100026000005"; //设备号ID 00010000100026000005
-uint16 m = 0;
 int8 rssi_t = 0;
 /*********************************************************************
  * TYPEDEFS
@@ -600,7 +598,6 @@ static void performPeriodicTask(void)
   //uint8 index = 0;
   uint8 i = 0;
   uint8 notiData[SIMPLEPROFILE_CHAR4_LEN] = {0};
-  m++;
   //发送ID的前10位                                        -----1
   notiData[0] = INFO_FIRST;
   notiData[1] = INFO_SEC;
